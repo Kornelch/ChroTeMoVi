@@ -9,6 +9,7 @@ What is this for
 
 ### Using ChroTeMo
 
-
 ## Chromosome Territory Viewer
 ### Using ChroTeVi
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
