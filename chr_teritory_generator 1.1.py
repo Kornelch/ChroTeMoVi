@@ -407,7 +407,7 @@ for iteracje in range(0,itera):
     print("RUN...")
     centromere() 
 
-    for i in range (0,max(l_arm)+1):
+    for i in range (0,max(l_arm_d)+1):
         
         rate(5)
         for n_i in range (0, (4*chr_pair)): #generate all chromosome
@@ -425,6 +425,6 @@ for iteracje in range(0,itera):
             f.write("\n")
 
     f.close()  
-    print("FINISH)
+    print("FINISH")
 
 
