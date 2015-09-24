@@ -1,8 +1,15 @@
-# Chromosome Territory Modeler and Viewer - project repository
+# Chromosome Territory Modeler and Viewer User Manual
 
-This page contain information about Chromosome Territory Modeller and Chromosome Territory Viewer.
-Files in repository:
-Chromosome Territory Modeller
-Chromosome Territory Viever
-Script for testing software environment
-User Manual
+What is this for
+
+## Chromosome Territory Modeler
+### Script Variables
+
+### Script functions
+
+### Using ChroTeMo
+
+## Chromosome Territory Viewer
+### Using ChroTeVi
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)

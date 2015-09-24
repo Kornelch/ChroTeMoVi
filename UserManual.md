@@ -16,7 +16,7 @@ Minimal hardware requirements are determined by requirements of Python and VPyth
 
 ### Testing software environment - loading and running scripts 
 After downloading and installing necessary software and libraries you can test your environment.
-For that purpose you should find icon for `VIDLE`,
+For that purpose you should find icon for `VIDLE`
 ![vidle](http://i.imgur.com/6s7SjPy.jpg)
 open testing script named `Test_Environment_Config.py` 
 
