@@ -113,9 +113,9 @@ if (a>0 and a<6 and b==0):
     k_kol[d][1]=0.14
     k_kol[d][2]=0.14
     k_kol[d][3]=1
-    k_kol[e][0]=0.81
-    k_kol[e][1]=0.45
-    k_kol[e][2]=0.21
+    k_kol[e][0]=1
+    k_kol[e][1]=0.54
+    k_kol[e][2]=0
     k_kol[e][3]=1
 
 if (b>0 and b<6):
@@ -166,9 +166,9 @@ if (b>0 and b<6):
     k_kol[b_2][1]=k_kol[b][1]=0.14
     k_kol[b_2][2]=k_kol[b][2]=0.14
     k_kol[b_2][3]=k_kol[b][3]=1
-    k_kol[b_3][0]=k_kol[b_1][0]=0.81
-    k_kol[b_3][1]=k_kol[b_1][1]=0.45
-    k_kol[b_3][2]=k_kol[b_1][2]=0.45
+    k_kol[b_3][0]=k_kol[b_1][0]=1
+    k_kol[b_3][1]=k_kol[b_1][1]=0.54
+    k_kol[b_3][2]=k_kol[b_1][2]=0
     k_kol[b_3][3]=k_kol[b_1][3]=1
 
 # Model drawing
