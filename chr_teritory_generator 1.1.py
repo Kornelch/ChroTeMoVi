@@ -311,7 +311,7 @@ for iteracje in range(0,itera):
             xyz[2][nr_k]=z
             k=0
             
-    def odl_wlas_chrom(): 
+    def dist_bead(): 
         global xyz, nr_k, ind, tab, eps_1, eps_2, x, y ,z,k, k_3
         for df in range (0, ind+1):
             if (df != k_3):
@@ -336,7 +336,7 @@ for iteracje in range(0,itera):
                         k=0
                         
                         break 
-    def odl_sasia():
+    def dist_precurs():
         global xyz, nr_k, k_1, z, y, z, epx_1, eps_2, k
         if (((2*rad_bead-eps_1) >  sqrt((xyz[0][nr_k]-x)**2+(xyz[1][nr_k]-y)**2+(xyz[2][nr_k]-z)**2)) or ((2*rad_bead+eps_1) <  sqrt((xyz[0][nr_k]-x)**2+(xyz[1][nr_k]-y)**2+(xyz[2][nr_k]-z)**2))):
             
@@ -346,7 +346,7 @@ for iteracje in range(0,itera):
             k=0
             
         
-    def warunki(nr_k_1, ty, dl_ch):
+    def bead_generate(nr_k_1, ty, dl_ch):
         global licznik
         global nr_k
         global y
@@ -394,10 +394,10 @@ for iteracje in range(0,itera):
             new_domain(nr_k)
             
             licznik=licznik+1
-            odl_wlas_chrom()    
+            dist_bead()    
             is_out_no()
                 
-            odl_sasia()
+            dist_precurs()
             if (k==1):
                 is_in_nu(nr_k)
            
@@ -415,7 +415,7 @@ for iteracje in range(0,itera):
                 
                 bead(xyz[0][n_i],xyz[1][n_i],xyz[2][n_i],k_kol[n_i][0],k_kol[n_i][1], k_kol[n_i][2], k_kol[n_i][3]) 
                 kr[n_i]=kr[n_i]+1 
-                warunki(n_i,ty[n_i],l_ch[n_i]) 
+                bead_generate(n_i,ty[n_i],l_ch[n_i]) 
                 ty[n_i]=ty[n_i]+1 
     f.write(str(ind+1))
     f.write("\n")
