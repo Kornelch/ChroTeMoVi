@@ -77,7 +77,8 @@ Basic parameters of model are defined in lines from 22 to 36 in block:
     trsp=1 #transparency of non-colore beads
     multi=1 #chromosome size multiplier
 
-    #****************** END PROGRAM PARAMETERS *********************************```
+    #****************** END PROGRAM PARAMETERS *********************************
+    ```
     
 
 Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters are as follows:
