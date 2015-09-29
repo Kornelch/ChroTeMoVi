@@ -158,31 +158,31 @@ for iteracje in range(0,itera):
 
     #generating nucleus
     def nucleus():
-        global x_s, y_s, z_s, r_s
-        r_s=round(random.uniform(min_rad_nu,max_rad_nu),5) 
-        f.write(str(r_s))
+        global x_nu, y_nu, z_nu, r_nu
+        R=round(random.uniform(min_rad_nu,max_rad_nu),5) 
+        f.write(str(R))
         f.write("\n")
         x_s=0
         y_s=0
         z_s=0
-        ball = sphere(pos=(x_s,y_s,z_s), radius=r_s, material=materials.emissive, opacity=0.2)
+        ball = sphere(pos=(x_nu,y_nu,z_nu), radius=R, material=materials.emissive, opacity=0.2)
     nucleus()
 
     #generating nucleolus
     def nucleolus():
         global x_j, y_j, z_j, r_j
-        r_s5=(max_vol_no*(r_s**(3)))**(1/3.0)
-        r_s30=(max_vol_no*(r_s**(3)))**(1/3.0)
+        r_s5=(max_vol_no*(R**(3)))**(1/3.0)
+        r_s30=(max_vol_no*(R**(3)))**(1/3.0)
     
         r_j=round(random.uniform(r_s5, r_s30),3) #generate the size of the nucleolus
     
         #generate the position of the nucleolus
         t=True
         while (t==True):
-            x_j=round(random.uniform((x_s-(r_s-r_j-1)),(x_s+(r_s-r_j-2))),5)
-            y_j=round(random.uniform((y_s-(r_s-r_j-1)),(y_s+(r_s-r_j-2))),5)
-            z_j=round(random.uniform((z_s-(r_s-r_j-1)),(z_s+(r_s-r_j-2))),5)
-            if (sqrt((x_j-0)**2+(y_j)**2+z_j**2)<(r_s-r_j-eps_2)):
+            x_j=round(random.uniform((x_nu-(R-r_j-1)),(x_nu+(R-r_j-2))),5)
+            y_j=round(random.uniform((y_nu-(R-r_j-1)),(y_nu+(R-r_j-2))),5)
+            z_j=round(random.uniform((z_nu-(R-r_j-1)),(z_nu+(R-r_j-2))),5)
+            if (sqrt((x_j-0)**2+(y_j)**2+z_j**2)<(R-r_j-eps_2)):
                 t=False
 
     nucleolus()
@@ -229,7 +229,7 @@ for iteracje in range(0,itera):
         global xyz
         global r_s, rad_bead
         
-        if (((r_s-rad_bead-eps_2)>sqrt((xyz[0][nr_k])**2+(xyz[1][nr_k])**2+(xyz[2][nr_k])**2))):
+        if (((R-rad_bead-eps_2)>sqrt((xyz[0][nr_k])**2+(xyz[1][nr_k])**2+(xyz[2][nr_k])**2))):
             ind=ind+1
             tab[0][ind]=nr_k #save number of domain
             tab[1][ind]=xyz[0][nr_k]
@@ -244,27 +244,27 @@ for iteracje in range(0,itera):
     #function to generate starting points - centromeres
     def centromere():
         
-        global xyz, r_s, rad_bead, x_j, y_j, z_j
+        global xyz, R, rad_bead, x_j, y_j, z_j
         for i in range (0,chr_pair*2):
             ij=i+(chr_pair*2)
-            print("i: ",i)
+            #print("i: ",i)
             spr=0
             while(spr==0):
                 
                 #generate x
-                xyz[0][i]=round(random.uniform((-r_s+4*rad_bead),(r_s-4*rad_bead)),5)
+                xyz[0][i]=round(random.uniform((-R+4*rad_bead),(R-4*rad_bead)),5)
                 xyz[0][ij]=xyz[0][i]
                 tab[0][i]=i
                 tab[0][ij]=ij
                 tab[1][i]=xyz[0][i]
                 tab[1][ij]=xyz[0][i]
                 #generate y
-                xyz[1][i]=round(random.uniform((-r_s+4*rad_bead),(r_s-4*rad_bead)),5)
+                xyz[1][i]=round(random.uniform((-R+4*rad_bead),(R-4*rad_bead)),5)
                 xyz[1][ij]=xyz[1][i]
                 tab[2][i]=xyz[1][i]
                 tab[2][ij]=xyz[1][i]
                 #generate z
-                xyz[2][i]=round(random.uniform((-r_s+4*rad_bead),(r_s-4*rad_bead)),5)
+                xyz[2][i]=round(random.uniform((-R+4*rad_bead),(R-4*rad_bead)),5)
                 xyz[2][ij]=xyz[2][i]
                 tab[3][i]=xyz[2][i]
                 tab[3][ij]=xyz[2][i]
@@ -281,7 +281,7 @@ for iteracje in range(0,itera):
                                 break
                                 spr=1
                 else:
-                    if (sqrt((xyz[0][i]-x_s)**2+(xyz[1][i]-y_s)**2+(xyz[2][i]-z_s)**2)<(r_s-(rad_bead+4*eps_2))):
+                    if (sqrt((xyz[0][i]-x_nu)**2+(xyz[1][i]-y_nu)**2+(xyz[2][i]-z_nu)**2)<(R-(rad_bead+4*eps_2))):
                         if (sqrt((xyz[0][i]-x_j)**2+(xyz[1][i]-y_j)**2+(xyz[2][i]-z_j)**2)>(r_j+rad_bead+2*eps_2)):
                             spr=1
                             break
