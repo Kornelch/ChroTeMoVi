@@ -79,7 +79,6 @@ Basic parameters of model are defined in lines from 22 to 36 in block:
 
     #****************** END PROGRAM PARAMETERS *********************************
     ```
-    
 
 Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters are as follows:
 
