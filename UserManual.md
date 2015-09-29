@@ -1,9 +1,9 @@
 # Chromosome Territory Modeller and Viewer: User Manual
 
 This document is a User Manual for Chromosome Territory Modeller (`ChroTeMo`) and Chromosome Territory Viewer (`ChroTeVi`).
-The first one is intended to use when you want to create chromosome territory model for specific species. It computes parameters of modelled chromosomes, allows to preview model and save results to file. Because all computations are done by `ChroTeMo`, it works some time.
+The first one is intended to use when you want to create chromosome territory model for specific species. It computes parameters of modelled chromosomes, allows to preview model and save results to file. Because all computations are done by `ChroTeMo`, it takes some time to view results.
 
-The second is designed to be a viewer - it let you to read file created by `ChroTeMo`, display, rotate, zoom in and out created model. Because it works on ready model it is also faster in use.
+The second script is designed to be a viewer - it let you to read file created by `ChroTeMo`, display, rotate, zoom in and out created model. Because it works on ready model it is also faster in use.
 
 ### Hardware and software requirements
 Both scripts are written in Python. For visualisation purposes we use VPython. 
@@ -46,69 +46,13 @@ Chromosome Territory Modeller (reffered later as ChroTeMo) is a file in reposito
 When you have source code of script downloaded, you can either run or customize configuration of Chromosome Territory Modeller before run.
 
 
-
-
-
-### Variables in ChroTeMo
-In our model there are some parameters, which can help to tailor and tune up the code for the simulation of chromosome territory arrangement in different species. When fitting implementation for a given purpose the following parameters can be set up  :
-
-•	`chr_pair` – number of chromosomes pairs to be generated;
-
-•	`l_arm_c` – table of length of the arms of a condensed chromosome;
-
-•	`l_arm_d` – table of length of the arms of a decondensed chromosome;
-
-•	`min_rad_nu` – the minimal radius of the nucleus;
-
-•	`max_rad_nu` – the maximum radius of the nucleus;
-
-•	`min_vol_no` – minimum volume of the nucleolus (expressed as percentage of nucleus  volume);
-
-•	`max_vol_no` – maximum volume of the nucleolus (expressed as percentage of nucleus  volume);
-
-•	`rad_bead` – rb, radius of a chromatin domain;
-
-•	`col_pair` – a parameter informing which pair of chromosomes has to be colored (0 for none);
-
-•	`col_arm` – a parameter informing how to colour the arms of the chromosome (if equals 1,  entire chromosome in displayed one color, if it equals 2, each arm of the chromosome is in different color);
-
-•	`eps_1` – ɛ1, a parameter used in collision detection procedure: minimal distance required to another domain of the same chromosome; 
-
-•	`eps_2` – ε2, a parameter used in collision detection procedure: minimal distance required to another domain of a different chromosome, also minimal distance from the boundaries of the nucleus and nucleolus;
-
-•	`trsp` – a transparency parameter for chromosomes that are not coloured during modelling (1 – transparency off, 0 – chromosomes are not visible);
-
-•	`multi` – multiplication: allows to increase the number of beads constituting one domain representation (1 domain = multi · 1 bead = multi · 1 sphere) . In the presented version of ChroTeMo, one domain is represented by one bead (multi = 1) and these two terms are used interchangeably in the latter parts of the text;
-
-•	`xyz[]` - is an array where coordinates of centromeres are stored.
-
-
-### ChroTeMo functions
-
-•	`nucleus()` The purpose of this function is to create the nucleus. The nucleus is represented by a sphere , with the coordinates of the center `(x_nu, y_nu, z_nu)` = (0, 0, 0), and with the radius *R* generated in a random way from the interval < `min_rad_nu`, `max_rad_nu` >;
-
-•	`nucleolus()` This function is used to generate the nucleolus. In the first step the radius of nucleolus *r* is determined using parameters `min_vol_no` and `max_vol_no`;
-
-•	`centromere()` This function is responsible for generating the coordinates of the centromere bead centres (for all chromosomes);
-
-•	`bead()` This function is used to draw all new domains of all chromosomes. The input parameters for this function are domain coordinates, colour (RGB colour defined as a separate degree of saturation for each component), and transparency. At the initial stage of the modelling process  this function is also responsible for drawing centromeres as spheres;
-
-•	`new_domain()` This function generates the coordinates of the new domain. 
-For domains that are drawn during building the condensed chromosomes, the new coordinates are generated based on previously, last generated coordinates (within the domain of the same arm). 
-For the domains that are drawn in the phase of chromatin decondensation, the coordinates of the next domain are determined on the basis of a randomly selected domain (referred to as a precursory domain) from all previously generated domains that constitute chromosome arms;
-
-•	`dist_bead()` This function is used to check whether the newly created domain does not collide with another domain within the same chromosome. The same function is also used to check whether there is not a collision with another domain within another chromosome. The only difference is in ε parameter – here ε2 (which is greater than ε1) is used;
-
-•	`dist_precurs()` The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain.
-
-If this condition is true, the program return to the function `new_domain()`;
-
-
 ## Setting Up ChroTeMo parameters
-To generate models of chromosome territory, you can set up mentioned above parameters to fit/tune model for your needs (species you examine). This can be done by direct editing script file. Parameters are listed at the beginning of the script file. 
+In our model there are some parameters, which can help to tailor and tune up the code for the simulation of chromosome territory arrangement in different species. When fitting implementation for a given purpose the following parameters can be set up.
+
+To generate model of chromosome territory, you can set up mentioned below parameters to fit/tune model for your needs (species you examine). This can be done by direct editing script file. Parameters are listed at the beginning of the script file. 
 ***Be careful !!*** Some parameters may cause script - Modeler a long running time (with parameter `multi`= 1000 script runs when testing more than 3 weeks)!
 
-If you are unsure about parameters, just change only species-specified <sp> parameters. You can experiment with the rest of parameters later.
+If you are unsure about parameters, just change only species-specific <sp> parameters. You can experiment with the rest of parameters (<mv> - model specific) later.
 
 After changing parameters you should save file (of course you can save file with different name).
 
@@ -137,7 +81,7 @@ Basic parameters of model are defined in lines from 22 to 36 in block:
 
 Some parameters are used as "species specific" <sp>, some for model and visualisation <mv> purposes. The meaning of parameters are as follows:
 
-* `chr_pair` - number (integer) of chromosome pairs <sp>; 
+* `chr_pair` - number (integer) of chromosome pairs <sp>. List in form `l_arm_c` =[1,2,3,4] means that 1st arm of 1st chromsome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4; 
 * `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2*`chr_pairs` <sp>;
 * `l_arm_d` - is a vector containing numbers (integer) representing length of chromome arms after decondensation. Here, length is counted in Mbps (mega basepairs). Quantity of entries should equals 2*`chr_pairs` <sp>;
 * `n_arm` - how many arms is to be coloured, you can choose either one (1) or two (2) <mv>;
@@ -152,6 +96,32 @@ Some parameters are used as "species specific" <sp>, some for model and visualis
 * `eps_2` - this parameter determines minimal distance that have to be kept between beads of different chromosomes. It is also used to determine minimal distance to be kept between beads and walls of nucleus and nucleolus. It is recommended that eps_1<eps_2 <mv>
 * `trsp` - this parameter determines transparency ranges (0,1). Value 0 for total transparency - object is not visible, 1 when there is no transparency <mv>;
 * `multi` - When you want to achieve more precise and detailed model of chromosome territory through more accurate impletion you can us this parameter. By default `multi`=1 what means that one bead is one domain. When you want fulfill space faithfully and with better accuracy (this can lead to more complicated shapes) you can increase this value. For example `multi`=4 means that one domain will be represented by 4 spheres, `multi`=10 means that one domain will be represented as 10 spheres. ***Warning! Increasing this parameter leads to significant growth of computational time necessary for model creation. *** <mv> 
+
+
+
+
+### ChroTeMo functions
+
+•	`nucleus()` The purpose of this function is to create the nucleus. The nucleus is represented by a sphere , with the coordinates of the center `(x_nu, y_nu, z_nu)` = (0, 0, 0), and with the radius *R* generated in a random way from the interval < `min_rad_nu`, `max_rad_nu` >;
+
+•	`nucleolus()` This function is used to generate the nucleolus. In the first step the radius of nucleolus *r* is determined using parameters `min_vol_no` and `max_vol_no`;
+
+•	`centromere()` This function is responsible for generating the coordinates of the centromere bead centres (for all chromosomes);
+
+•	`bead()` This function is used to draw all new domains of all chromosomes. The input parameters for this function are domain coordinates, colour (RGB colour defined as a separate degree of saturation for each component), and transparency. At the initial stage of the modelling process  this function is also responsible for drawing centromeres as spheres;
+
+•	`new_domain()` This function generates the coordinates of the new domain. 
+For domains that are drawn during building the condensed chromosomes, the new coordinates are generated based on previously, last generated coordinates (within the domain of the same arm). 
+For the domains that are drawn in the phase of chromatin decondensation, the coordinates of the next domain are determined on the basis of a randomly selected domain (referred to as a precursory domain) from all previously generated domains that constitute chromosome arms;
+
+•	`dist_bead()` This function is used to check whether the newly created domain does not collide with another domain within the same chromosome. The same function is also used to check whether there is not a collision with another domain within another chromosome. The only difference is in ε parameter – here ε2 (which is greater than ε1) is used;
+
+•	`dist_precurs()` The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain.
+
+If this condition is true, the program return to the function `new_domain()`;
+
+
+
 
 
 ## Running ChroTeMo
