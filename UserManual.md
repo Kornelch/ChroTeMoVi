@@ -53,11 +53,11 @@ To simulate the model of chromosome territories arrangement, you can set up the 
 
 If you are unsure about parameters, just change only species specific **(sp)** parameters. You can experiment with the rest of parameters (**(mv)** - model specific) later.
 
-After changing parameters you should save file (of course you can save file with different name).
+After changing the parameters you should save the modified file.
 
-To change parameters you should open file ChroTeMo source file. It can be done with any text editor, but it is more comfortable to use any supporting syntax colouring.
+To change the parameters you should open file ChroTeMo source file. It can be done with any text editor, but it is more comfortable to use any supporting syntax colouring.
 
-Basic parameters of model are defined in lines from 22 to 36 in block:
+Basic parameters of the model are defined in lines from 22 to 36 in block:
 ```
   #************************* PROGRAM PARAMETERS - can be modified *******************************
     l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by coma
@@ -80,9 +80,9 @@ Basic parameters of model are defined in lines from 22 to 36 in block:
   
  ```
 
-Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters are as follows:
+Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters is as follows:
 
-* `chr_pair` - number (integer) of chromosome pairs **(sp)**. List in form `l_arm_c` =[1,2,3,4] means that 1st arm of 1st chromsome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4 **(sp)**; 
+* `chr_pair` - number (integer) of chromosome pairs **(sp)**. List in form `l_arm_c` = [1,2,3,4] means that 1st arm of 1st chromsome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4 **(sp)**; 
 * `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2\*`chr_pairs` **(sp)**;
 * `l_arm_d` - is a vector containing numbers (integer) representing length of chromome arms after decondensation. Here, length is counted in Mbps (mega basepairs). Quantity of entries should equals 2\*`chr_pairs` **(sp)**;
 * `min_rad_nu` - this parameter represents minimal radius of nucleus, usually taken from experiments and/or from literature **(sp)**; ***Jaka jednostka?***
