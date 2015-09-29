@@ -1,7 +1,7 @@
 # Chromosome Territory Modeller and Viewer: User Manual
 
 This document is a User Manual for Chromosome Territory Modeller (`ChroTeMo`) and Chromosome Territory Viewer (`ChroTeVi`).
-The first one is intended to use when you want to create chromosome territory model for specific species. It computes parameters of modelled chromosomes, allows to preview model and save results to file. Bacause all computations are done by `ChroTeMo`, it works some time.
+The first one is intended to use when you want to create chromosome territory model for specific species. It computes parameters of modelled chromosomes, allows to preview model and save results to file. Because all computations are done by `ChroTeMo`, it works some time.
 
 The second is designed to be a viewer - it let you to read file created by `ChroTeMo`, display, rotate, zoom in and out created model. Because it works on ready model it is also faster in use.
 
