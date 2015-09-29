@@ -39,7 +39,7 @@ With the use of the central mouse button you should be able to zoom the view in 
 If you succeed, ChroTeMo and ChroTeVi should now run on your computer.
 
 ## Chromosome Territory Modeller
-The purpose of ChroTeMo is to create model of chromosome territory.
+The purpose of ChroTeMo is to create a model of chromosome territories distribution.
 Chromosome Territory Modeller (reffered later as ChroTeMo) is a file in repository with the name ChroTeMo_v.X.py, where where X denotes the number of version. 
 
 When you have source code of script downloaded, you can either run or customize configuration of Chromosome Territory Modeller before run.
