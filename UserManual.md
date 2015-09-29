@@ -1,18 +1,18 @@
 # Chromosome Territory Modeller and Viewer: User Manual
 
 This document is a User Manual for Chromosome Territory Modeller (`ChroTeMo`) and Chromosome Territory Viewer (`ChroTeVi`).
-The first one is intended to use when you want to create chromosome territory model for specific species. It computes parameters of modelled chromosomes, allows to preview model and save results to file. Because all computations are done by `ChroTeMo`, it takes some time to view results.
+The first one is intended to use when you want to create chromosome territory model for a specific species. It computes the parameters of modeled chromosomes, allows to preview the model and saves the results to a file. 
 
-The second script is designed to be a viewer - it let you to read file created by `ChroTeMo`, display, rotate, zoom in and out created model. Because it works on ready model it is also faster in use.
+(`ChroTeVi`) is designed to be a viewer - it lets you to read files created by `ChroTeMo`, display,  zoom in and out, and rotate the created model. 
 
 ### Hardware and software requirements
-Both scripts are written in Python. For visualisation purposes we use VPython. 
+Both scripts are written in Python. For visualization purposes we use VPython. 
 Our scripts also use libraries: `Tkinter`, `tkFileDialog`, `time`, `random`, `gc`, `array` and `datetime`.
 
-If you are using Linux, probably you have Python itself already installed.
-See Python and libraries (`VPython`) documentation  about how to install necessary software. For links see Appendix at the end of this manual.
+If you are using Linux, probably you have Python already installed.
+See Python and libraries (`VPython`) documentation to learn how to install the necessary software. For links see the Appendix at the end of this manual.
 
-Minimal hardware requirements are determined by requirements of Python and VPython. Anyway, because of visualisation probably it will be more comfortable if you will have own graphics card - not only those integrated with mainboard.
+Minimal hardware requirements are determined by requirements of Python and VPython. However, because of the visualisation probably it will be more comfortable if you have an additional graphics card - not only the one integrated with the mainboard.
 
 ### Testing software environment - loading and running scripts 
 After downloading and installing necessary software and libraries you can test your environment.
@@ -27,17 +27,16 @@ and run it
 
 ![Run test](http://i.imgur.com/kJwUrN8.jpg)
 
-You should see a picture similiar to presented below.
+You should see a picture similiar to the one presented below.
 
 ![displayedTest](http://i.imgur.com/vCjkCf1.jpg)
 
-When you press right mouse button and move mouse you should be able to rotate this picture. 
+When you press the right mouse button and move the mouse you should be able to rotate this picture. 
 
 ![Canvas Move ](http://i.imgur.com/BXam8bu.jpg)
-With the use of central mouse botton you should be able to zoom in and zoom out.
+With the use of the central mouse button you should be able to zoom the view in and out.
 
-If you succeed, you can go on. 
-ChroTeMo and ChroTeVi should now run on your computer.
+If you succeed, ChroTeMo and ChroTeVi should now run on your computer.
 
 ## Chromosome Territory Modeller
 The purpose of ChroTeMo is to create model of chromosome territory.
