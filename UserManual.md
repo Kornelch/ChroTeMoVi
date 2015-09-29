@@ -52,7 +52,7 @@ In our model there are some parameters, which can help to tailor and tune up the
 To generate model of chromosome territory, you can set up mentioned below parameters to fit/tune model for your needs (species you examine). This can be done by direct editing script file. Parameters are listed at the beginning of the script file. 
 ***Be careful !!*** Some parameters may cause script - Modeler a long running time (with parameter `multi`= 1000 script runs when testing more than 3 weeks)!
 
-If you are unsure about parameters, just change only species-specific <sp> parameters. You can experiment with the rest of parameters (<mv> - model specific) later.
+If you are unsure about parameters, just change only species specific **sp** parameters. You can experiment with the rest of parameters (**mv** - model specific) later.
 
 After changing parameters you should save file (of course you can save file with different name).
 
@@ -79,23 +79,23 @@ Basic parameters of model are defined in lines from 22 to 36 in block:
 
     #****************** END PROGRAM PARAMETERS *********************************```
 
-Some parameters are used as "species specific" <sp>, some for model and visualisation <mv> purposes. The meaning of parameters are as follows:
+Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters are as follows:
 
-* `chr_pair` - number (integer) of chromosome pairs <sp>. List in form `l_arm_c` =[1,2,3,4] means that 1st arm of 1st chromsome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4; 
-* `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2*`chr_pairs` <sp>;
-* `l_arm_d` - is a vector containing numbers (integer) representing length of chromome arms after decondensation. Here, length is counted in Mbps (mega basepairs). Quantity of entries should equals 2*`chr_pairs` <sp>;
-* `n_arm` - how many arms is to be coloured, you can choose either one (1) or two (2) <mv>;
-* `n_chr` - which pair of chromosomes you want to colour. The number (integer) should be from range zero (0) and `chr_pair`. When you choose zero it means that you do not want to color any chromosome. **Note:** This does not have influence on model saved in file. This apply only to visualisation during model creation. <MV>
-* `n_chr_2` - by setting up this parmeter you can choose second pair of chromosome you want to paint. See description of `n_chr` above <mv>
-* `min_rad_nu` - this parameter represents minimal radius of nucleus, usually taken from experiments and/or from literature <sp> ***Jaka jednostka?***
-* `max_rad_nu` - this parameter represents maximal radius of nucleus, usually taken from experiments and/or from literature <sp> ***Jaka jednostka?***
-* `min_vol_no` - this parameter is to determine the maximum percentage of volume in nucleus occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature <sp>;
-* `max_vol_no` - this parameter is to determine the minimal percentage of volume in nucleus occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature <sp>;
-* `rad_bed` - this parameters determines radius of beads representing domains. Teoretically there is no limitation of the number, but it is recommended to be reasonable in comparison of radius of nucleus for succesfull model creation <mv>;
-* `eps_1` - this parameter determines minimal distance that have to be kept between beads in the same chromosome <mv>;
-* `eps_2` - this parameter determines minimal distance that have to be kept between beads of different chromosomes. It is also used to determine minimal distance to be kept between beads and walls of nucleus and nucleolus. It is recommended that eps_1<eps_2 <mv>
-* `trsp` - this parameter determines transparency ranges (0,1). Value 0 for total transparency - object is not visible, 1 when there is no transparency <mv>;
-* `multi` - When you want to achieve more precise and detailed model of chromosome territory through more accurate impletion you can us this parameter. By default `multi`=1 what means that one bead is one domain. When you want fulfill space faithfully and with better accuracy (this can lead to more complicated shapes) you can increase this value. For example `multi`=4 means that one domain will be represented by 4 spheres, `multi`=10 means that one domain will be represented as 10 spheres. ***Warning! Increasing this parameter leads to significant growth of computational time necessary for model creation. *** <mv> 
+* `chr_pair` - number (integer) of chromosome pairs **(sp)**. List in form `l_arm_c` =[1,2,3,4] means that 1st arm of 1st chromsome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4; 
+* `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2*`chr_pairs` **(sp)**;
+* `l_arm_d` - is a vector containing numbers (integer) representing length of chromome arms after decondensation. Here, length is counted in Mbps (mega basepairs). Quantity of entries should equals 2*`chr_pairs` **sp**;
+* `n_arm` - how many arms is to be coloured, you can choose either one (1) or two (2) **(mv)**;
+* `n_chr` - which pair of chromosomes you want to colour. The number (integer) should be from range zero (0) and `chr_pair`. When you choose zero it means that you do not want to color any chromosome. **Note:** This does not have influence on model saved in file. This apply only to visualisation during model creation **(mv)**;
+* `n_chr_2` - by setting up this parmeter you can choose second pair of chromosome you want to paint. See description of `n_chr` above **(mv)**;
+* `min_rad_nu` - this parameter represents minimal radius of nucleus, usually taken from experiments and/or from literature **(sp)**; ***Jaka jednostka?***
+* `max_rad_nu` - this parameter represents maximal radius of nucleus, usually taken from experiments and/or from literature **(sp)**; ***Jaka jednostka?***
+* `min_vol_no` - this parameter is to determine the maximum percentage of volume in nucleus occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature **(sp)**;
+* `max_vol_no` - this parameter is to determine the minimal percentage of volume in nucleus occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature **(sp)**;
+* `rad_bed` - this parameters determines radius of beads representing domains. Teoretically there is no limitation of the number, but it is recommended to be reasonable in comparison of radius of nucleus for succesfull model creation **(mv)**;
+* `eps_1` - this parameter determines minimal distance that have to be kept between beads in the same chromosome **(mv)**;
+* `eps_2` - this parameter determines minimal distance that have to be kept between beads of different chromosomes. It is also used to determine minimal distance to be kept between beads and walls of nucleus and nucleolus. It is recommended that eps_1<eps_2 **(mv)**;
+* `trsp` - this parameter determines transparency ranges (0,1). Value 0 for total transparency - object is not visible, 1 when there is no transparency **(mv)**;
+* `multi` - When you want to achieve more precise and detailed model of chromosome territory through more accurate impletion you can us this parameter. By default `multi`=1 what means that one bead is one domain. When you want fulfill space faithfully and with better accuracy (this can lead to more complicated shapes) you can increase this value. For example `multi`=4 means that one domain will be represented by 4 spheres, `multi`=10 means that one domain will be represented as 10 spheres. ***Warning! Increasing this parameter leads to significant growth of computational time necessary for model creation. *** **(mv)**; 
 
 
 
