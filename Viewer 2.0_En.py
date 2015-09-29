@@ -17,7 +17,7 @@ import gc
 from array import *
 
 l=0
-k_kol=[[0 for col in range(4)] for row in range(20)]
+k_kol=[[0 for col in range(4)] for row in range(100)]
 tab = [[0 for col in range(90000)] for row in range(10)]
 # GUI elements
 root = Tkinter.Tk()
@@ -29,7 +29,7 @@ r_k=float(f.readline())
 l=l+1
 ite=int(f.readline())
 l=l+1
-for po in range (0,20):
+for po in range (0,4*ite+1):
     for po2 in range (0,4):
         k_kol[po][po2]=float(f.readline())
         l=l+1
@@ -43,22 +43,28 @@ z_j=float(f.readline())
 l=l+1
 r_j=float(f.readline())
 l=l+1
+print(l)
 ind=int(f.readline())
 l=l+1
-for i in range (0,562):
-    #print("i ",i)
-    #print("l ", l)
-    #tym=float(f.readline())
+licz=0
+i=0
+while 1:
+    licz=licz+1
     tab[0][i]=int(f.readline())
+    if not tab[0][i]: break
     l=l+1
     tab[1][i]=float(f.readline())
+    if not tab[1][i]: break
     l=l+1
     tab[2][i]=float(f.readline())
+    if not tab[2][i]: break
     l=l+1
     tab[3][i]=float(f.readline())
+    if not tab[3][i]: break
     l=l+1
+    i=i+1
 #float(tab)
-for re in range(0, 20):
+for re in range(0, 4*ite):
             for re_2 in range (0,4):
                 k_kol[re][re_2]=1
 
@@ -74,7 +80,7 @@ prz=input("0 - beads invisible, 1 - no transparency \n")
 
 #pb=3
 # Setting transparency for beads
-for p in range(0,20):
+for p in range(0,4*ite):
     k_kol[p][3]=prz
 
 # Displaying information about colors of chromosomes or arms, and setting colors
@@ -174,7 +180,7 @@ if (b>0 and b<6):
 # Model drawing
 ball = sphere(pos=(0,0,0), radius=r_s, material=materials.emissive, opacity=0.2)
 ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, material=materials.chrome, opacity=1)
-for z in range (0, 562):
+for z in range (0, licz):
     kul=sphere(pos=(tab[1][z],tab[2][z], tab[3][z]), radius=r_k, color=(k_kol[tab[0][z]][0],k_kol[tab[0][z]][1],k_kol[tab[0][z]][2]), opacity=k_kol[tab[0][z]][3])
 
 # Closing the file
