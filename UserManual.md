@@ -52,7 +52,7 @@ In our model there are some parameters, which can help to tailor and tune up the
 To generate model of chromosome territory, you can set up mentioned below parameters to fit/tune model for your needs (species you examine). This can be done by direct editing script file. Parameters are listed at the beginning of the script file. 
 ***Be careful !!*** Some parameters may cause script - Modeler a long running time (with parameter `multi`= 1000 script runs when testing more than 3 weeks)!
 
-If you are unsure about parameters, just change only species specific **sp** parameters. You can experiment with the rest of parameters (**mv** - model specific) later.
+If you are unsure about parameters, just change only species specific **(sp)** parameters. You can experiment with the rest of parameters (**(mv)** - model specific) later.
 
 After changing parameters you should save file (of course you can save file with different name).
 
@@ -78,6 +78,7 @@ Basic parameters of model are defined in lines from 22 to 36 in block:
     multi=1 #chromosome size multiplier
 
     #****************** END PROGRAM PARAMETERS *********************************```
+    
 
 Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters are as follows:
 
