@@ -45,34 +45,56 @@ ChroTeMo model nucleus and nucleolus as spheres with given radius. Chromatine do
 
 ### Variables in ChroTeMo
 In our model there are some parameters, which can help to tailor and tune up the code for the simulation of chromosome territory arrangement in different species. When fitting implementation for a given purpose the following parameters can be set up  :
+
 •	`chr_pair` – number of chromosomes pairs to be generated;
+
 •	`l_arm_c` – table of length of the arms of a condensed chromosome;
+
 •	`l_arm_d` – table of length of the arms of a decondensed chromosome;
+
 •	`min_rad_nu` – the minimal radius of the nucleus;
+
 •	`max_rad_nu` – the maximum radius of the nucleus;
+
 •	`min_vol_no` – minimum volume of the nucleolus (expressed as percentage of nucleus  volume);
+
 •	`max_vol_no` – maximum volume of the nucleolus (expressed as percentage of nucleus  volume);
+
 •	`rad_bead` – rb, radius of a chromatin domain;
+
 •	`col_pair` – a parameter informing which pair of chromosomes has to be colored (0 for none);
+
 •	`col_arm` – a parameter informing how to colour the arms of the chromosome (if equals 1,  entire chromosome in displayed one color, if it equals 2, each arm of the chromosome is in different color);
+
 •	`eps_1` – ɛ1, a parameter used in collision detection procedure: minimal distance required to another domain of the same chromosome; 
+
 •	`eps_2` – ε2, a parameter used in collision detection procedure: minimal distance required to another domain of a different chromosome, also minimal distance from the boundaries of the nucleus and nucleolus;
+
 •	`trsp` – a transparency parameter for chromosomes that are not coloured during modelling (1 – transparency off, 0 – chromosomes are not visible);
-•	`multi` – multiplication: allows to increase the number of beads constituting one domain representation (1 domain = multi · 1 bead = multi · 1 sphere) . In the presented version of ChroTeMo, one domain is represented by one bead (multi = 1) and these two terms are used interchangeably in the latter parts of the text.
+
+•	`multi` – multiplication: allows to increase the number of beads constituting one domain representation (1 domain = multi · 1 bead = multi · 1 sphere) . In the presented version of ChroTeMo, one domain is represented by one bead (multi = 1) and these two terms are used interchangeably in the latter parts of the text;
+
 •	`xyz[]` - is an array where coordinates of centromeres are stored.
 
 
 ### ChroTeMo functions
 
-•	`nucleus()` The purpose of this function is to create the nucleus. The nucleus is represented by a sphere , with the coordinates of the center `(x_nu, y_nu, z_nu)` = (0, 0, 0), and with the radius *R* generated in a random way from the interval < `min_rad_nu`, `max_rad_nu` >
-•	`nucleolus()` This function is used to generate the nucleolus. In the first step the radius of nucleolus *r* is determined using parameters `min_vol_no` and `max_vol_no`.
-•	`centromere()` This function is responsible for generating the coordinates of the centromere bead centres (for all chromosomes).
-•	`bead()` This function is used to draw all new domains of all chromosomes. The input parameters for this function are domain coordinates, colour (RGB colour defined as a separate degree of saturation for each component), and transparency. At the initial stage of the modelling process  this function is also responsible for drawing centromeres as spheres.
+•	`nucleus()` The purpose of this function is to create the nucleus. The nucleus is represented by a sphere , with the coordinates of the center `(x_nu, y_nu, z_nu)` = (0, 0, 0), and with the radius *R* generated in a random way from the interval < `min_rad_nu`, `max_rad_nu` >;
+
+•	`nucleolus()` This function is used to generate the nucleolus. In the first step the radius of nucleolus *r* is determined using parameters `min_vol_no` and `max_vol_no`;
+
+•	`centromere()` This function is responsible for generating the coordinates of the centromere bead centres (for all chromosomes);
+
+•	`bead()` This function is used to draw all new domains of all chromosomes. The input parameters for this function are domain coordinates, colour (RGB colour defined as a separate degree of saturation for each component), and transparency. At the initial stage of the modelling process  this function is also responsible for drawing centromeres as spheres;
+
 •	`new_domain()` This function generates the coordinates of the new domain. 
 For domains that are drawn during building the condensed chromosomes, the new coordinates are generated based on previously, last generated coordinates (within the domain of the same arm). 
-For the domains that are drawn in the phase of chromatin decondensation, the coordinates of the next domain are determined on the basis of a randomly selected domain (referred to as a precursory domain) from all previously generated domains that constitute chromosome arms. 
-•	`dist_bead()` This function is used to check whether the newly created domain does not collide with another domain within the same chromosome. The same function is also used to check whether there is not a collision with another domain within another chromosome. The only difference is in ε parameter – here ε2 (which is greater than ε1) is used. 
-•	`dist_precurs()` The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain. 
+For the domains that are drawn in the phase of chromatin decondensation, the coordinates of the next domain are determined on the basis of a randomly selected domain (referred to as a precursory domain) from all previously generated domains that constitute chromosome arms;
+
+•	`dist_bead()` This function is used to check whether the newly created domain does not collide with another domain within the same chromosome. The same function is also used to check whether there is not a collision with another domain within another chromosome. The only difference is in ε parameter – here ε2 (which is greater than ε1) is used;
+
+•	`dist_precurs()` The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain.
+
 If this condition is true, the program return to the function `new_domain()`;
 
 
