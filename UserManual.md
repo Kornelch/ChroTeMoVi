@@ -3,7 +3,7 @@
 This document is a User Manual for Chromosome Territory Modeller (`ChroTeMo`) and Chromosome Territory Viewer (`ChroTeVi`).
 The first one is intended to use when you want to create chromosome territory model for a specific species. It computes the parameters of modeled chromosomes, allows to preview the model and saves the results to a file. 
 
-(`ChroTeVi`) is designed to be a viewer - it lets you to read files created by `ChroTeMo`, display,  zoom in and out, and rotate the created model. 
+`ChroTeVi` is designed to be a viewer - it lets you to read files created by `ChroTeMo`, display,  zoom in and out, and rotate the created model. 
 
 ### Hardware and software requirements
 Both scripts are written in Python. For visualization purposes we use VPython. 
@@ -46,10 +46,10 @@ When you have source code of script downloaded, you can either run or customize 
 
 
 ## Setting Up ChroTeMo parameters
-In our model there are some parameters, which can help to tailor and tune up the code for the simulation of chromosome territory arrangement in different species. When fitting implementation for a given purpose the following parameters can be set up.
+In our model there are some parameters, which can help to tailor and tune up the code for the simulation of chromosome territories arrangement in different species. When adjusting the implementation for a given specie the following parameters can be set up.
 
-To generate model of chromosome territory, you can set up mentioned below parameters to fit/tune model for your needs (species you examine). This can be done by direct editing script file. Parameters are listed at the beginning of the script file. 
-***Be careful !!*** Some parameters may cause script - Modeler a long running time (with parameter `multi`= 1000 script runs when testing more than 3 weeks)!
+To simulate the model of chromosome territories arrangement, you can set up the parameters  mentioned below to fit/tune the model to your needs. This can be done by direct editing of the script file. The parameters are listed at the beginning of the script file. 
+***Be careful !!*** Some parameters may result in a long running time of `ChroTeMo` (when testing the parameter `multi` = 1000, the script ran for more than 3 weeks)!
 
 If you are unsure about parameters, just change only species specific **(sp)** parameters. You can experiment with the rest of parameters (**(mv)** - model specific) later.
 
