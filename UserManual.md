@@ -84,7 +84,7 @@ Basic parameters of model are defined in lines from 22 to 36 in block:
 Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters are as follows:
 
 * `chr_pair` - number (integer) of chromosome pairs **(sp)**. List in form `l_arm_c` =[1,2,3,4] means that 1st arm of 1st chromsome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4; 
-* `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2x`chr_pairs` **(sp)**;
+* `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2\*`chr_pairs` **(sp)**;
 * `l_arm_d` - is a vector containing numbers (integer) representing length of chromome arms after decondensation. Here, length is counted in Mbps (mega basepairs). Quantity of entries should equals 2x`chr_pairs` **sp**;
 * `n_arm` - how many arms is to be coloured, you can choose either one (1) or two (2) **(mv)**;
 * `n_chr` - which pair of chromosomes you want to colour. The number (integer) should be from range zero (0) and `chr_pair`. When you choose zero it means that you do not want to color any chromosome. **Note:** This does not have influence on model saved in file. This apply only to visualisation during model creation **(mv)**;
