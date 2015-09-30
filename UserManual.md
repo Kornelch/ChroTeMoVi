@@ -95,7 +95,7 @@ Some parameters are used as "species specific" **(sp)**, some for model and visu
 * `eps_1` - this parameter determines the minimum distance that have to be kept between the beads in the same chromosome **(mv)**;
 * `eps_2` - this parameter determines the minimum distance that have to be kept between the beads of different chromosomes. It is also used to determine minimum distance to be kept between the beads and the boundaries of the nucleus and nucleolus. It is recommended that eps_1<eps_2 **(mv)**;
 * `trsp` - this parameter determines transparency in a range (0,1). Choose 1 if you wish the transparency off, if you choose 0 the chromosomes will not be visible **(mv)**;
-* `multi` - When you want to achieve more precise and detailed model of chromosome territory through more accurate impletion you can us this parameter. By default `multi`= 1 what means that one bead is one domain. When you want fulfill space faithfully and with better accuracy (this can lead to more complicated shapes) you can increase this value. For example `multi`=4 means that one domain will be represented by 4 spheres, `multi`=10 means that one domain will be represented as 10 spheres. ***Warning! Increasing this parameter leads to significant growth of computational time necessary for model creation.*** **(mv)**; 
+* `multi` - When you want to achieve more precise and detailed model of chromosome territories through more accurate impletion you can use this parameter. By default `multi`= 1 which means that one bead corresponds to one domain. When you want to fill space faithfully and with better accuracy you can increase this value ( keep in mind that this can lead to more complicated shapes of the simualted territories). For example, `multi`= 4 means that one domain will be represented by 4 spheres, `multi`=10 means that one domain will be represented as 10 spheres. ***Warning! Increasing this parameter leads to significant increase of the computational time necessary for model creation.*** **(mv)**; 
 
 
 
@@ -104,11 +104,11 @@ Some parameters are used as "species specific" **(sp)**, some for model and visu
 
 •	`nucleus()` The purpose of this function is to create the nucleus. The nucleus is represented by a sphere , with the coordinates of the center `(x_nu, y_nu, z_nu)` = (0, 0, 0), and with the radius *R* generated in a random way from the interval < `min_rad_nu`, `max_rad_nu` >;
 
-•	`nucleolus()` This function is used to generate the nucleolus. In the first step the radius of nucleolus *r* is determined using parameters `min_vol_no` and `max_vol_no`;
+•	`nucleolus()` This function is used to generate the nucleolus. In the first step the radius of the nucleolus *r* is determined using parameters `min_vol_no` and `max_vol_no`;
 
-•	`centromere()` This function is responsible for generating the coordinates of the centromere bead centres (for all chromosomes);
+•	`centromere()` This function is responsible for generating the coordinates of the centromere bead centers (for all chromosomes);
 
-•	`bead()` This function is used to draw all new domains of all chromosomes. The input parameters for this function are domain coordinates, colour (RGB colour defined as a separate degree of saturation for each component), and transparency. At the initial stage of the modelling process  this function is also responsible for drawing centromeres as spheres;
+•	`bead()` This function is used to draw all new domains of all chromosomes. The input parameters for this function are domain coordinates, color (RGB color defined as a separate degree of saturation for each component), and transparency. At the initial stage of the modelling process this function is also responsible for drawing centromeres as spheres;
 
 •	`new_domain()` This function generates the coordinates of the new domain. 
 For domains that are drawn during building the condensed chromosomes, the new coordinates are generated based on previously, last generated coordinates (within the domain of the same arm). 
@@ -116,9 +116,7 @@ For the domains that are drawn in the phase of chromatin decondensation, the coo
 
 •	`dist_bead()` This function is used to check whether the newly created domain does not collide with another domain within the same chromosome. The same function is also used to check whether there is not a collision with another domain within another chromosome. The only difference is in ε parameter – here ε2 (which is greater than ε1) is used;
 
-•	`dist_precurs()` The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain.
-
-If this condition is true, the program return to the function `new_domain()`;
+•	`dist_precurs()` The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain. If this condition is true, the program returns to the function `new_domain()`;
 
 
 
@@ -126,28 +124,28 @@ If this condition is true, the program return to the function `new_domain()`;
 
 ## Running ChroTeMo
 
-Open file `ChroTeMo` with VIDLE in similiar way as described in "Testing Software Environment".
+Open file `ChroTeMo` with VIDLE in the same way as described in "Testing Software Environment".
 ChroTeMo can work in a half-batch mode: you can generate a few to a dozen models with one run.
 
-In the beginning the first (and last) question appears: "How many results do you want?" You should write any reasonable (in the meaning of computational time) number denoted the number of models to be created.  
-All you have to do is to run script. It can be done in the same way as described above, when testing software environment.
+In the beginning the first (and last) question appears: "How many results do you want?" You should write any reasonable (in terms of computational time) number denoting the number of models to be created.  
+All you have to do is to run the script. It can be done in the same way as described above, when testing software environment.
 Wait a while and ... enjoy your model!
 
-When you close ChroTeMo, windows with visualisation will close, but the file with elements describing model remains in working directory. Files have names with convention: `workfile + data + time.txt`. 
-They can be used as input files for ChroTeVi
+When you close ChroTeMo, the windows with visualization will close, but the file containing the model description is automatically saved into the working directory. Files hare named according to the pattern: `workfile + data + time.txt`. 
+They can be used as the input files for ChroTeVi
 
 ## Using ChroTeVi
-Load ChroTeVi script with VIDLE as mentioned above. Run it in the same way as previously. 
-Then you will be asked to point to file generated by ChroTeMo.
+Load ChroTeVi script with VIDLE as mentioned above and run it in the same way as previously. 
+Then you will be asked to point to a file generated by ChroTeMo.
  
 Then, you will be asked some questions:
 
-1. Which pair of chromosomes you want to paint. You should write digits denoting pairs to be painted. If you  want to paint only one pair - your second answer should be 0 (zero).
-2. The degree of transparency for the rest of beads in range from 0 to 1, when 0 means full transparency (beads will be invisible), 1 meand no transparency.
-3. If you want to color only one pair of chromosome (answer to second question is zero), then here you can choose whether you want to paint entire chomosome or each arm of chromosome.
+1. Which pair of chromosomes you want to paint. You should write digits denoting the pairs to be painted. If you want to paint only one pair, the answer to the second question should be 0 (zero).
+2. The degree of transparency for the rest of the beads in a range from 0 to 1, where 0 means full transparency (beads will be invisible), 1 means no transparency.
+3. If you want to color only one pair of chromosomes,  here you can choose whether you want to paint the entire chomosome in one color or use different colors for each arm ofthe chromosome.
 
-Now you should be able to view generated model. 
-With the use of mouse buttons and scroll you should be able to zoom in, zoom out and rotate model.
+Now you should be able to view the generated model. 
+With the use of the mouse buttons and scroll you should be able to zoom in, zoom out and rotate the model.
 
   
 That's all.
