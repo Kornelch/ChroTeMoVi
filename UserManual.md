@@ -1,3 +1,9 @@
+**Authors:** Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok***
+
+**This document is licensed under CC BY-NC-SA 4.0**
+
+*If you find these scripts useful please support us/appreciate our work and cite: Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok: Chromosome Territory Modeller and Viewer, ToBeJournal*
+
 # Chromosome Territory Modeller and Viewer: User Manual
 
 This document is a User Manual for Chromosome Territory Modeller (`ChroTeMo`) and Chromosome Territory Viewer (`ChroTeVi`).
@@ -10,7 +16,7 @@ Both scripts are written in Python. For visualization purposes we use VPython.
 Our scripts also use libraries: `Tkinter`, `tkFileDialog`, `time`, `random`, `gc`, `array` and `datetime`.
 
 If you are using Linux, probably you have Python already installed.
-See Python and libraries (`VPython`) documentation to learn how to install the necessary software. For links see the Appendix at the end of this manual.
+See [Python](https://wiki.python.org/moin/BeginnersGuide/Download) and libraries [VPython](http://vpython.org/) documentation to learn how to install the necessary software. 
 
 Minimal hardware requirements are determined by requirements of Python and VPython. However, because of the visualisation probably it will be more comfortable if you have an additional graphics card - not only the one integrated with the mainboard.
 
