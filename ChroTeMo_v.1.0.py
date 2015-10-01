@@ -19,7 +19,7 @@ for iteracje in range(0,itera):
 
     ###############################################################################
     #************************* PROGRAM PARAMETERS - can be modified *******************************
-    l_arm_c=[7,6,6,4,3] #length of chromosome's arm before decondensation, seperate by coma
+    l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by coma
     l_arm_d=[37,29,25,20,8,38,30,35,29,20] #length of chromosome's arm after decondensation, separeta by coma, all short first, all long 
     chr_pair=5 #number of chromosome pairs
     n_arm=2 #how many arms should be colored (1 or 2)
@@ -55,7 +55,7 @@ for iteracje in range(0,itera):
     for ft in range(0,2*chr_pair,2):
         fh=ft+(chr_pair*2)
         l_ch[ft]=l_ch[ft+1]=l_arm_c[fk]
-        #fk=fk+1
+        fk=fk+1
         l_ch[fh]=l_ch[fh+1]=l_arm_c[fk]
         fk=fk+1
     
@@ -412,7 +412,7 @@ for iteracje in range(0,itera):
     centromere() 
 
     for i in range (0,max(l_arm_d)+1):
-        print('checking'+str(i))
+        print('checking '+str(i))
         rate(5)
         for n_i in range (0, (4*chr_pair)): #generate all chromosome
             if (kr[n_i]<l_ram[n_i]): #until kr =  length of chromose
