@@ -1,5 +1,5 @@
 print("===================================================================")
-print (""" This code is licensed under GPLv3 license.
+print (""" This code is licensed under CC-BY-SA-NC 3.0 license.
             For details see: https://creativecommons.org/licenses/
             """)
 print("===================================================================")
@@ -86,7 +86,7 @@ for p in range(0,4*ite):
     k_kol[p][3]=prz
 
 # Displaying information about colors of chromosomes or arms, and setting colors
-if (a>0 and a<6 and b==0):
+if (a>0 and b==0):
     # chromosom a, jeden z pary, rami? krotsze ma kolor
     print("If only one pair is to be painted, certain chromosome in pair is denoted with digit_A and digit_B"+"\n")
     print(" shorter arm in "+str(a)+"_A"+" will be painted as dark green ")
@@ -126,7 +126,7 @@ if (a>0 and a<6 and b==0):
     k_kol[e][2]=0
     k_kol[e][3]=1
 
-if (b>0 and b<6):
+if (b>0):
     print(" 1st chromosome from ",a, " pair will be in dark green \n")
     print(" 2nd chromosome from ",a, " pair will be in light green \n")
     print(" 1st chromosome from ",b, " pair will be in dark red \n")
@@ -161,10 +161,11 @@ if (b>0 and b<6):
         b=2
     if (b==3):
         b=4
-    if (b==4):
-        b=6
-    if (b==5):
-        b=8
+    else:
+        if (b==4):
+            b=6
+        if (b==5):
+            b=8
     b_1=b+1
     b_2=b+10
     b_3=b_2+1
