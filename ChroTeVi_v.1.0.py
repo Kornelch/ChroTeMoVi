@@ -1,5 +1,5 @@
 print("===================================================================")
-print (""" This code is licensed under CC-BY-SA-NC 3.0 license.
+print (""" This code is licensed under GPLv3 license.
             For details see: https://creativecommons.org/licenses/
             """)
 print("===================================================================")
