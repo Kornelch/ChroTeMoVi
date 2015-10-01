@@ -16,9 +16,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 print("===================================================================")
-print (""" This code is licensed under CC-BY-SA-NC 3.0 license.
-            For details see: https://creativecommons.org/licenses/
-            """)
+print (""" This code is licensed under GPLv3 license          """)
 print("===================================================================")
 print("Please select file with generated model (ChroTeMo output): ")
 #print("""If you find this code useful please support us and cite:
@@ -123,7 +121,7 @@ if (a>0 and b==0):
     if (a==5):
         a=8
     c=a+1
-    d=a+10
+    d=a+ite
     e=d+1
 # color settings
     k_kol[a][0]=0.0
@@ -160,7 +158,7 @@ if (b>0):
     if (a==5):
         a=8
     c=a+1
-    d=a+10
+    d=a+ite
     e=d+1
 # color settings
     k_kol[a][0]=k_kol[d][0]=0.0
@@ -184,7 +182,7 @@ if (b>0):
         if (b==5):
             b=8
     b_1=b+1
-    b_2=b+10
+    b_2=b+ite
     b_3=b_2+1
 
 # colors settings
@@ -205,3 +203,4 @@ for z in range (0, licz):
 
 # Closing the file
 f.close()
+
