@@ -3,7 +3,7 @@ for iteracje in range(0,itera):
     #**************************************************************************************************
     #Program description                                                                              *
     #Simulation of chromosome teritory                                                                *
-    #licence: GPLv3                                                                         *
+    #licence: CC BY-NC-SA 3.0                                                                         *
     #when you used it please cite: Plos ....                                                          *
     #**************************************************************************************************
 
@@ -408,7 +408,7 @@ for iteracje in range(0,itera):
     centromere() 
 
     for i in range (0,max(l_arm_d)+1):
-        
+        print('checking'+str(i))
         rate(5)
         for n_i in range (0, (4*chr_pair)): #generate all chromosome
             if (kr[n_i]<l_ram[n_i]): #until kr =  length of chromose
