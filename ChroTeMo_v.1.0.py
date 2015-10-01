@@ -19,8 +19,8 @@ for iteracje in range(0,itera):
 
     ###############################################################################
     #************************* PROGRAM PARAMETERS - can be modified *******************************
-    l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by coma
-    l_arm_d=[37,29,25,20,8,38,30,35,29,20] #length of chromosome's arm after decondensation, separeta by coma
+    l_arm_c=[7,6,6,4,3] #length of chromosome's arm before decondensation, seperate by coma
+    l_arm_d=[37,29,25,20,8,38,30,35,29,20] #length of chromosome's arm after decondensation, separeta by coma, all short first, all long 
     chr_pair=5 #number of chromosome pairs
     n_arm=2 #how many arms should be colored (1 or 2)
     n_chr=1 #which pair of chromosome sholud be colored - 0 if none
@@ -41,6 +41,9 @@ for iteracje in range(0,itera):
     licznik=0
     par_12=0.95
     lb_ram=n_arm
+    x_nu=0
+    y_nu=0
+    z_nu=0
     tab = [[0 for col in range(90000)] for row in range(10)] #the array to save the coordinate of centers of Domains
     ind=19
     #the array for storing coordinates of the points
@@ -52,8 +55,9 @@ for iteracje in range(0,itera):
     for ft in range(0,2*chr_pair,2):
         fh=ft+(chr_pair*2)
         l_ch[ft]=l_ch[ft+1]=l_arm_c[fk]
-        fk=fk+1
+        #fk=fk+1
         l_ch[fh]=l_ch[fh+1]=l_arm_c[fk]
+        fk=fk+1
     
     
     #the array of arms length
@@ -158,7 +162,7 @@ for iteracje in range(0,itera):
 
     #generating nucleus
     def nucleus():
-        global x_nu, y_nu, z_nu, r_nu
+        global x_nu, y_nu, z_nu, r_nu, R
         R=round(random.uniform(min_rad_nu,max_rad_nu),5) 
         f.write(str(R))
         f.write("\n")
@@ -170,7 +174,7 @@ for iteracje in range(0,itera):
 
     #generating nucleolus
     def nucleolus():
-        global x_j, y_j, z_j, r_j
+        global x_j, y_j, z_j, r_j, R
         r_s5=(max_vol_no*(R**(3)))**(1/3.0)
         r_s30=(max_vol_no*(R**(3)))**(1/3.0)
     
@@ -272,7 +276,7 @@ for iteracje in range(0,itera):
             
                 if (i>0):
                     if (sqrt((xyz[0][i]-x_j)**2+(xyz[1][i]-y_j)**2+(xyz[2][i]-z_j)**2)>(r_j+rad_bead+2*eps_2)):
-                        if (sqrt((xyz[0][i])**2+(xyz[1][i])**2+(xyz[2][i])**2)<(r_s-(rad_bead+5*eps_2))):
+                        if (sqrt((xyz[0][i])**2+(xyz[1][i])**2+(xyz[2][i])**2)<(R-(rad_bead+5*eps_2))):
                             for j in range (0,i):
                                 if (sqrt((xyz[0][i]-xyz[0][j])**2+(xyz[1][i]-xyz[1][j])**2+(xyz[2][i]-xyz[2][j])**2)>(2*rad_bead+2*eps_2)):
                                     spr=spr+1
@@ -426,5 +430,3 @@ for iteracje in range(0,itera):
 
     f.close()  
     print("FINISH")
-
-
