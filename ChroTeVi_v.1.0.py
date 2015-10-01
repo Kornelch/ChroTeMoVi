@@ -43,15 +43,15 @@ z_j=float(f.readline())
 l=l+1
 r_j=float(f.readline())
 l=l+1
-print(l)
+
 ind=int(f.readline())
-print(ind)
+
 l=l+1
 licz=0
 odcz=1
 i=0
 while odcz==1:
-    print('petla')
+    
     licz=licz+1
     tym=str(f.readline())
     if tym=='': break
@@ -62,7 +62,7 @@ while odcz==1:
     tab[2][i]=float(f.readline())
     l=l+1
     tab[3][i]=float(f.readline())
-    print(tab[3][i])
+    
     l=l+1
     i=i+1
 
