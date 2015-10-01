@@ -29,7 +29,7 @@ r_k=float(f.readline())
 l=l+1
 ite=int(f.readline())
 l=l+1
-for po in range (0,4*ite+1):
+for po in range (0,4*(ite/2)):
     for po2 in range (0,4):
         k_kol[po][po2]=float(f.readline())
         l=l+1
@@ -45,25 +45,27 @@ r_j=float(f.readline())
 l=l+1
 print(l)
 ind=int(f.readline())
+print(ind)
 l=l+1
 licz=0
+odcz=1
 i=0
-while 1:
+while odcz==1:
+    print('petla')
     licz=licz+1
-    tab[0][i]=int(f.readline())
-    if not tab[0][i]: break
+    tym=str(f.readline())
+    if tym=='': break
+    tab[0][i]=int(tym)
     l=l+1
     tab[1][i]=float(f.readline())
-    if not tab[1][i]: break
     l=l+1
     tab[2][i]=float(f.readline())
-    if not tab[2][i]: break
     l=l+1
     tab[3][i]=float(f.readline())
-    if not tab[3][i]: break
+    print(tab[3][i])
     l=l+1
     i=i+1
-#float(tab)
+
 for re in range(0, 4*ite):
             for re_2 in range (0,4):
                 k_kol[re][re_2]=1
