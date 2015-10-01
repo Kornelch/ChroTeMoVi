@@ -3,7 +3,7 @@ for iteracje in range(0,itera):
     #**************************************************************************************************
     #Program description                                                                              *
     #Simulation of chromosome teritory                                                                *
-    #licence: CC BY-NC-SA 3.0                                                                         *
+    #licence: GPLv3                                                                       *
     #when you used it please cite: Plos ....                                                          *
     #**************************************************************************************************
 
