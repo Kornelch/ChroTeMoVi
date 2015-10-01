@@ -2,7 +2,7 @@
 
 **This document is licensed under CC BY-NC-SA 4.0**
 
-*If you find these scripts useful please support us/appreciate our work and cite: Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok: Chromosome Territory Modeller and Viewer, ToBeJournal*
+*If you find these scripts useful please appreciate our work and cite: Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok: Chromosome Territory Modeller and Viewer, ToBeJournal*
 
 # Chromosome Territory Modeller and Viewer: User Manual
 
@@ -66,7 +66,7 @@ Basic parameters of the model are defined in lines from 22 to 36 in block:
 ```
   #************************* PROGRAM PARAMETERS - can be modified *******************************
     l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, separated by coma
-    l_arm_d=[37,29,25,20,8,38,30,35,29,20] #length of chromosome's arm after decondensation, separated by coma
+    l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separated by coma
     chr_pair=5 #number of chromosome pairs
     n_arm=2 #how many arms should be colored (1 or 2)
     n_chr=1 #which pair of chromosome sholud be colored - 0 if none
@@ -85,13 +85,13 @@ Basic parameters of the model are defined in lines from 22 to 36 in block:
   
  ```
 
-Some parameters are used as "species specific" **(sp)**, some for model and visualisation **(mv)** purposes. The meaning of parameters is as follows:
+Some parameters are used as "species specific" **(sp)**, some for model and visualization **(mv)** purposes. The meaning of parameters is as follows:
 
-* `chr_pair` - number (integer) of chromosome pairs **(sp)**. List in form `l_arm_c` = [1,2,3,4] means that 1st arm of 1st chromsome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4 **(sp)**; 
-* `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2\*`chr_pairs` **(sp)**;
-* `l_arm_d` - is a vector containing numbers (integer) representing length of chromome arms after decondensation. Here, length is counted in Mbp (mega basepairs). Number of entries should equal 2\*`chr_pairs` **(sp)**;
-* `min_rad_nu` - this parameter represents minimum radius of nucleus (calculated in micrometers), usually taken from experiments and/or from literature **(sp)**; ***Jaka jednostka?***
-* `max_rad_nu` - this parameter represents maximum radius of nucleus (calculated in micrometers), usually taken from experiments and/or from literature **(sp)**; ***Jaka jednostka?***
+* `chr_pair` - number (integer) of chromosome pairs **(sp)**. 
+* `l_arm_c` - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2\*`chr_pairs`. List in form `l_arm_c` = [1,2,3,4] means that 1st arm of 1st chromosome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4 **(sp)**;
+* `l_arm_d` - is a vector containing numbers (integer) representing length of chromosome arms after decondensation. Here, length is counted in Mbp (mega basepairs). Number of entries should equal 2\*`chr_pairs` **(sp)**;
+* `min_rad_nu` - this parameter represents minimum radius of nucleus (calculated in micrometers), usually taken from experiments and/or from literature **(sp)**; 
+* `max_rad_nu` - this parameter represents maximum radius of nucleus (calculated in micrometers), usually taken from experiments and/or from literature **(sp)**; 
 * `min_vol_no` - this parameter is to determine the maximum percentage of nucleus volume occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature **(sp)**;
 * `max_vol_no` - this parameter is to determine the minimum percentage of nucleus volume occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature **(sp)**;
 * `n_arm` - how many arms are to be colored, one (1) or two (2) **(mv)**;
@@ -159,6 +159,5 @@ Enjoy!
 
 
 # Appendix A
-1. Python download and installation: https://wiki.python.org/moin/BeginnersGuide/Download
-2. VPython download and documentation: http://vpython.org/
+
 
