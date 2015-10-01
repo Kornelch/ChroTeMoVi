@@ -159,5 +159,28 @@ Enjoy!
 
 
 # Appendix A
+Algorithm pseudocode:
+```
+Input data: Model's parameters
+Result: Model of chromosome territory arrangement
+
+generate nucleus;
+generate nucleolus;
+generate centromeres;
+draw centromeres;
+for each arm do
+    while number of domains in arm do
+        repeat
+            generate new coordinates of domain;
+            check whether inside nucleus;
+            check collision with nucleolus;
+            check collision with beads in different chromosome;
+            check collision with other beads in own chromosome;
+        until not collision;
+        draw domain;
+     end
+end
+save bead coordinates (tab[]) to file;
+```
 
 
