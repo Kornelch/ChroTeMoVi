@@ -61,6 +61,9 @@ for iteracje in range(0,itera):
     x_nu=0
     y_nu=0
     z_nu=0
+    rad_bead=rad_bead/multi
+    l_arm_d=l_arm_d*multi
+    l_armc=l_arm_c*multi
     tab = [[0 for col in range(90000)] for row in range(10)] #the array to save the coordinate of centers of Domains
     ind=(chr_pair*4)-1
     #the array for storing coordinates of the points
