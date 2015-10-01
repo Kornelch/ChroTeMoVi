@@ -45,7 +45,7 @@ for iteracje in range(0,itera):
     y_nu=0
     z_nu=0
     tab = [[0 for col in range(90000)] for row in range(10)] #the array to save the coordinate of centers of Domains
-    ind=19
+    ind=(chr_pair*4)-1
     #the array for storing coordinates of the points
     xyz = [[0 for col in range(chr_pair*4)] for row in range(4)]
     #the array to write the length of chromosomes before dekondensation
