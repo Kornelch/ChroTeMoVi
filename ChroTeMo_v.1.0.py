@@ -20,7 +20,7 @@ for iteracje in range(0,itera):
     ###############################################################################
     #************************* PROGRAM PARAMETERS - can be modified *******************************
     l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by coma
-    l_arm_d=[37,29,25,20,8,38,30,35,29,20] #length of chromosome's arm after decondensation, separeta by coma, all short first, all long 
+    l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separeta by coma 
     chr_pair=5 #number of chromosome pairs
     n_arm=2 #how many arms should be colored (1 or 2)
     n_chr=1 #which pair of chromosome sholud be colored - 0 if none
@@ -64,10 +64,13 @@ for iteracje in range(0,itera):
     l_ram=[0 for col in range (chr_pair*4)]
     
     fk=0
-    for ft in range(0,4*chr_pair,2):
+    for ft in range(0,2*chr_pair,2):
+        fx=ft+(chr_pair*2)
         l_ram[ft]=l_ram[ft+1]=l_arm_d[fk]
         fk=fk+1
-    print(l_ram)
+        l_ram[fx]=l_ram[fx+1]=l_arm_d[fk]
+        fk=fk+1
+    #print(l_ram)
   
 
 
