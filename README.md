@@ -4,10 +4,10 @@ This page contains information about Chromosome Territory Modeller and Chromosom
 
 Files in the repository:
 
-- Chromosome Territory Modeller, 
-- Chromosome Territory Viever, 
-- Script for testing software environment, 
-- User Manual,
+- Chromosome Territory Modeller (file ChroTeMo_vX.py, X means version), 
+- Chromosome Territory Viever (file ChroTeVi_vX.py, X means version), 
+- Script for testing software environment (file Test_Environment_Config.py), 
+- User Manual (markdown and pdf versions),
 - Readme,
 - License.
 
