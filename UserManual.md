@@ -23,23 +23,24 @@ Minimal hardware requirements are determined by requirements of Python and VPyth
 ### Testing software environment - loading and running scripts 
 After downloading and installing necessary software and libraries you can test your environment.
 For that purpose you should find icon for `VIDLE`
-![vidle](http://i.imgur.com/6s7SjPy.jpg)
+![vidle](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/VIdle.jpg)
 open testing script named `Test_Environment_Config.py` 
 
-![open in vidle](http://i.imgur.com/hEU4N5b.jpg)
-![testChoose](http://i.imgur.com/W10yKaD.jpg)
+![open in vidle](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestOpen.jpg)
+![testChoose](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestChoose.jpg)
 
 and run it
 
-![Run test](http://i.imgur.com/kJwUrN8.jpg)
+![Run test](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestRun.jpg)
 
 You should see a picture similiar to the one presented below.
 
-![displayedTest](http://i.imgur.com/vCjkCf1.jpg)
+![displayedTest](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DisplayedCanvasTest.jpg)
 
 When you press the right mouse button and move the mouse you should be able to rotate this picture. 
 
-![Canvas Move ](http://i.imgur.com/BXam8bu.jpg)
+![Canvas Move ](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/MoveCanvas.jpg)
+
 With the use of the central mouse button you should be able to zoom the view in and out.
 
 If you succeed, ChroTeMo and ChroTeVi should now run on your computer.
