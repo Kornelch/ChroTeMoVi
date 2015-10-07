@@ -69,9 +69,6 @@ Basic parameters of the model are defined in lines from 22 to 36 in block:
     l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, separated by coma
     l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separated by coma
     chr_pair=5 #number of chromosome pairs
-    n_arm=2 #how many arms should be colored (1 or 2)
-    n_chr=1 #which pair of chromosome sholud be colored - 0 if none
-    n_chr_2=0 #second pair of chromosome which can be colored - 0 if none
     min_rad_nu=6.8 #minimum radius of nucleus
     max_rad_nu=7 #maximum radius of nucleus
     min_vol_no=0.05 #minimum occupancy of nucleus by nucleolus
@@ -79,7 +76,7 @@ Basic parameters of the model are defined in lines from 22 to 36 in block:
     rad_bead=0.5 #radius of beads
     eps_1=0.004 #admissible distance from the beads within the same chromosome
     eps_2=0.05 #admissible distance from the beads within a different chromosome
-    trsp=1 #transparency of non-colored beads
+    trsp=1 #transparency of beads
     multi=1 #bead number multiplier
 
     #****************** END PROGRAM PARAMETERS *********************************
@@ -95,9 +92,6 @@ Some parameters are used as "species specific" **(sp)**, some for model and visu
 * `max_rad_nu` - this parameter represents maximum radius of nucleus (calculated in micrometers), usually taken from experiments and/or from literature **(sp)**; 
 * `min_vol_no` - this parameter is to determine the maximum percentage of nucleus volume occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature **(sp)**;
 * `max_vol_no` - this parameter is to determine the minimum percentage of nucleus volume occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature **(sp)**;
-* `n_arm` - how many arms are to be colored, one (1) or two (2) **(mv)**;
-* `n_chr` - which pair of chromosomes you want to colur. The number (integer) should be in range from zero (0) to `chr_pair`. When you choose zero it means that you do not want to color any chromosomes. **Note:** This does not have influence on model saved in file. It applies only to visualization during model creation **(mv)**;
-* `n_chr_2` - by setting up this parmeter you can the choose second pair of chromosome that you want to paint. See description of `n_chr` above **(mv)**;
 * `rad_bead` - this parameters determines the radius of beads representing domains. Theoretically there is no limitation of the number, but it is recommended to be reasonable and take into account the radius of the nucleus for succesful model creation **(mv)**;
 * `eps_1` - this parameter determines the minimum distance that have to be kept between the beads in the same chromosome **(mv)**;
 * `eps_2` - this parameter determines the minimum distance that have to be kept between the beads of different chromosomes. It is also used to determine minimum distance to be kept between the beads and the boundaries of the nucleus and nucleolus. It is recommended that eps_1<eps_2 **(mv)**;
