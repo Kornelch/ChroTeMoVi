@@ -2,8 +2,9 @@
 
 **This document is licensed under CC BY-NC-SA 4.0**
 
+<!---
 *If you find these scripts useful please appreciate our work and cite: Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok: Chromosome Territory Modeller and Viewer, ToBeJournal*
-
+-->
 # Chromosome Territory Modeller and Viewer: User Manual
 
 This document is a User Manual for Chromosome Territory Modeller (`ChroTeMo`) and Chromosome Territory Viewer (`ChroTeVi`).
