@@ -1,10 +1,11 @@
-**Authors:** Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok***
+**Authors:** Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok
 
 **This document is licensed under CC BY-NC-SA 4.0**
 
-<!---
-*If you find these scripts useful please appreciate our work and cite: Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok: Chromosome Territory Modeller and Viewer, ToBeJournal*
--->
+
+*The most recent version of User Manual is located in [github repository](https://github.com/Kornelch/ChroTeMoVi/blob/master/UserManual.md)*
+
+
 # Chromosome Territory Modeller and Viewer: User Manual
 
 This document is a User Manual for Chromosome Territory Modeller (`ChroTeMo`) and Chromosome Territory Viewer (`ChroTeVi`).
@@ -23,9 +24,11 @@ Minimal hardware requirements are determined by requirements of Python and VPyth
 
 ### Testing software environment - loading and running scripts 
 After downloading and installing necessary software and libraries you can test your environment.
-For that purpose you should find icon for `VIDLE`
+For that purpose you should find icon for `VIDLE`,
+
 ![vidle](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/VIdle.jpg)
-open testing script named `Test_Environment_Config.py` 
+
+open testing script named `Test_Environment_Config.py`:
 
 ![open in vidle](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestOpen.jpg)
 ![testChoose](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestChoose.jpg)
@@ -43,6 +46,10 @@ When you press the right mouse button and move the mouse you should be able to r
 ![Canvas Move ](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/MoveCanvas.jpg)
 
 With the use of the central mouse button you should be able to zoom the view in and out.
+
+To download files from Github, clone repository (or navigate to address https://github.com/Kornelch/ChroTeMoVi and download archive - see picture below).
+
+![Download](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DownloadFromGithub.jpg)
 
 If you succeed, ChroTeMo and ChroTeVi should now run on your computer.
 
