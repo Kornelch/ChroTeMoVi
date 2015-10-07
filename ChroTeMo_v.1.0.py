@@ -54,7 +54,7 @@ for iteracje in range(0,itera):
     #****************** variables in the program - DO NOT MODIFY WITHOUT UNDERSTANDING THE CODE *****************************
     licznik=0
     par_12=0.95
-    lb_ram=n_arm
+    lb_ram=2
     x_nu=0
     y_nu=0
     z_nu=0
