@@ -39,9 +39,6 @@ for iteracje in range(0,itera):
     l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by coma
     l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separeta by coma 
     chr_pair=5 #number of chromosome pairs
-    n_arm=2 #how many arms should be colored (1 or 2)
-    n_chr=1 #which pair of chromosome sholud be colored - 0 if none
-    n_chr_2=0 #second pair of chromosome which can be colored - 0 if none
     min_rad_nu=6.8 #minimal radius of nucleus
     max_rad_nu=7 #maksimal radius of nucleus
     min_vol_no=0.05 #minimum occupancy of nucleus by nucleolus
@@ -61,10 +58,16 @@ for iteracje in range(0,itera):
     x_nu=0
     y_nu=0
     z_nu=0
-    if multi!=1:
+    multi=int(multi)
+    if multi>1:
         l_arm_c = [x * multi for x in l_arm_c]
         l_arm_d = [x * multi for x in l_arm_d]
-        rad_bead = rad_bead/(multi/4) 
+        if multi<4:
+            rad_bead = rad_bead/multi
+        else:
+            rad_bead = rad_bead/(multi/4)
+    if multi<1:
+        print("Warning: multi must be greater than 1 ")
     tab = [[0 for col in range(90000)] for row in range(10)] #the array to save the coordinate of centers of Domains
     ind=(chr_pair*4)-1
     #the array for storing coordinates of the points
@@ -102,106 +105,7 @@ for iteracje in range(0,itera):
 
     
     ty=[0 for col in range(chr_pair*4)]
-    if n_chr==1:
-        a_1=0
-        b_1=1
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==2:
-        a_1=2
-        b_1=3
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==3:
-        a_1=4
-        b_1=5
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==4:
-        a_1=6
-        b_1=7
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==5:
-        a_1=8
-        b_1=9
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==6:
-        a_1=10
-        b_1=11
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==7:
-        a_1=12
-        b_1=13
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==8:
-        a_1=14
-        b_1=15
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==9:
-        a_1=16
-        b_1=17
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr==10:
-        a_1=18
-        b_1=19
-        c_1=a_1+2*chr_pair
-        d_1=b_1+2*chr_pair
-    if n_chr_2==1:
-        a_2=0
-        b_2=1
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==2:
-        a_2=2
-        b_2=3
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==3:
-        a_2=4
-        b_2=5
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==4:
-        a_2=6
-        b_2=7
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==5:
-        a_2=8
-        b_2=9
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==6:
-        a_2=10
-        b_2=11
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==7:
-        a_2=12
-        b_2=13
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==8:
-        a_2=14
-        b_2=15
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==9:
-        a_2=16
-        b_2=17
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
-    if n_chr_2==10:
-        a_2=18
-        b_2=19
-        c_2=a_2+2*chr_pair
-        d_2=b_2+2*chr_pair
+
 
     #the array of colors and transparency of domains
     k_kol=[[0 for col in range(4)] for row in range(chr_pair*4)]
@@ -209,58 +113,7 @@ for iteracje in range(0,itera):
             for re_2 in range (0,3):
                 k_kol[re][re_2]=1
             k_kol[re][3]=trsp
-    if (n_chr != 0 and lb_ram==2):
-        k_kol[a_1][0]=0.12
-        k_kol[a_1][1]=0.55
-        k_kol[a_1][2]=0.1
-        k_kol[a_1][3]=1
-        k_kol[b_1][0]=0.0
-        k_kol[b_1][1]=0.1
-        k_kol[b_1][2]=0.0
-        k_kol[b_1][3]=1
-        k_kol[c_1][0]=0.6
-        k_kol[c_1][1]=0.0
-        k_kol[c_1][2]=0.0
-        k_kol[c_1][3]=1
-        k_kol[d_1][0]=0.8
-        k_kol[d_1][1]=0.04
-        k_kol[d_1][2]=0.04
-        k_kol[d_1][3]=1
-        if (n_chr_2 != 0):
-            k_kol[a_2][0]=0.12
-            k_kol[a_2][1]=0.55
-            k_kol[a_2][2]=0.1
-            k_kol[a_2][3]=1
-            k_kol[b_2][0]=0.0
-            k_kol[b_2][1]=0.1
-            k_kol[b_2][2]=0.0
-            k_kol[b_2][3]=1
-            k_kol[c_2][0]=0.6
-            k_kol[c_2][1]=0.0
-            k_kol[c_2][2]=0.0
-            k_kol[c_2][3]=1
-            k_kol[d_2][0]=0.8
-            k_kol[d_2][1]=0.04
-            k_kol[d_2][2]=0.04
-            k_kol[d_2][3]=1
-    if (lb_ram==1 and n_chr!=0):
-        k_kol[a_1][0]=k_kol[b_1][0]=0.12
-        k_kol[a_1][1]=k_kol[b_1][1]=0.55
-        k_kol[a_1][2]=k_kol[b_1][2]=0.1
-        k_kol[a_1][3]=k_kol[b_1][3]=1
-        k_kol[c_2][0]=k_kol[d_1][0]=0.6
-        k_kol[c_2][1]=k_kol[d_1][1]=0.0
-        k_kol[c_2][2]=k_kol[d_1][2]=0.0
-        k_kol[c_2][3]=k_kol[d_1][3]=1
-        if (n_chr_2 != 0):
-            k_kol[a_2][0]=k_kol[b_2][0]=0.12
-            k_kol[a_2][1]=k_kol[b_2][1]=0.55
-            k_kol[a_2][2]=k_kol[b_2][2]=0.1
-            k_kol[a_2][3]=k_kol[b_2][3]=1
-            k_kol[c_2][0]=k_kol[b_2][0]=0.6
-            k_kol[c_2][1]=k_kol[d_2][1]=0.0
-            k_kol[c_2][2]=k_kol[d_2][2]=0.0
-            k_kol[c_2][3]=k_kol[d_2][3]=1
+
                 
             
     
