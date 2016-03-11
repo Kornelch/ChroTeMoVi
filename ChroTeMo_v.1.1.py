@@ -33,7 +33,7 @@ itera=input("How many results do you want? \n")
 success_count = 0
 
 while success_count < itera:
-    
+    success_count=success_count+1
     #label .start;
     #**************************************************************************************************
     #Program description                                                                              *
