@@ -14,7 +14,8 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+#!/usr/bin/env python 
+# -*- coding: utf-8 -*-
 print("===================================================================")
 print (""" This code is licensed under GPLv3 license          """)
 print("===================================================================")
@@ -197,7 +198,7 @@ if (b>0):
 
 # Model drawing
 ball = sphere(pos=(0,0,0), radius=r_s, material=materials.emissive, opacity=0.2)
-ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, material=materials.chrome, opacity=1)
+ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, opacity=1)
 for z in range (0, licz):
     kul=sphere(pos=(tab[1][z],tab[2][z], tab[3][z]), radius=r_k, color=(k_kol[tab[0][z]][0],k_kol[tab[0][z]][1],k_kol[tab[0][z]][2]), opacity=k_kol[tab[0][z]][3])
 
