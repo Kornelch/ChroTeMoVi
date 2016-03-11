@@ -8,8 +8,10 @@ Files in the repository:
 - Chromosome Territory Viever (file `ChroTeVi_vX.py`, X means version), 
 - Script for testing software environment (file `Test_Environment_Config.py`), 
 - User Manual `UserManula.md` (markdown and pdf versions),
-- File `Satellite_Articles.md` which contains additional articles that uses ChroTe script suite,
+- File `Satellite_Articles.md` which contains list of additional articles that uses ChroTe script suite,
 - Readme,
 - License.
 
 Repository also contains Media folder with screendumps and screencasts
+
+If you made use of our scripts and want that your article to be listed as Satellite Article - please inform us, sending referrences to your article and/or link to electronic version.
