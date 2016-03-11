@@ -1,3 +1,5 @@
+#!/usr/bin/env python 
+# -*- coding: utf-8 -*-
 #
 #    Copyright (C) 2015  K. Chromiński, M. Tkacz, D. Idziak, E. Bread, R. Hasterok
 #    when you used it please cite: Plos ....   
@@ -14,8 +16,7 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*-
+
 print("===================================================================")
 print (""" This code is licensed under GPLv3 license          """)
 print("===================================================================")
