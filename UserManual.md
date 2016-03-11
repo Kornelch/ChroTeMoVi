@@ -17,12 +17,19 @@ The first one is intended to use when you want to create chromosome territory mo
 Both scripts are written in Python. For visualization purposes we use VPython. 
 Our scripts also use libraries: `Tkinter`, `tkFileDialog`, `time`, `random`, `gc`, `array` and `datetime`.
 
+Scripts has been tested to run on:
+* Windows 7, Windows 8, Windows 8.1 64 bit with Python 2.7.9 and Vpython 2.7-6.11
+* MacOS 2.7.10 and Vpython 2.7.6.11
+* Debian-based distribution (Debian 8.3 and LMDE2) with default Python interpreter (Python 2.7.9 [GCC4.9.2] and `python-visual` package, accessible directly via `apt-get` from debian repository mirrors.
+
 If you are using Linux, probably you have Python already installed.
-See [Python](https://wiki.python.org/moin/BeginnersGuide/Download) and libraries [VPython](http://vpython.org/) documentation to learn how to install the necessary software. 
+See [Python](https://wiki.python.org/moin/BeginnersGuide/Download) and libraries [VPython](http://vpython.org/) documentation to learn how to install the necessary software or to section "Notes for Linux users" below.
 
-Minimal hardware requirements are determined by requirements of Python and VPython. However, because of the visualisation probably it will be more comfortable if you have an additional graphics card - not only the one integrated with the mainboard.
+Minimal hardware requirements are determined by requirements of Python and VPython. However, because of the visualisation, probably it will be more comfortable if you have an additional graphics card - not only the one integrated with the mainboard.
 
-### Testing software environment - loading and running scripts 
+##Installation
+
+### Notes for Windows users
 After downloading and installing necessary software and libraries you can test your environment.
 For that purpose you should find icon for `VIDLE`,
 
@@ -52,6 +59,73 @@ To download files from Github, clone repository (or navigate to address https://
 ![Download](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DownloadFromGithub.jpg)
 
 If you succeed, ChroTeMo and ChroTeVi should now run on your computer.
+
+### Notes for Linux users
+If you are an advanced Linux user, see "In short" section below.
+
+
+Our application does not use any sophisticated parameters from VPython, so it should work even on the old library, accessible in default Linux package systems. According to [Vpython webpage](http://vpython.org/contents/download_linux.html) it is recommended to use the newest version, but it requires more effort: either run through Wine or build from the source. This should change in the [near future](http://vpython.org/contents/announcements/evolution.html  "future") when VPython will use WebGL or [Jupyter notebooks](http://jupyter.org/ "Jupyter project").
+
+In this manual we show how to run our scripts under Debian 8.3, default Python installation, and basic version of VPython.
+![Debian and Python version](http://i.imgur.com/phDtv4Q.png)
+Before you start, make sure that your network connection is up and running. We  also assume that you have working Linux, capable for updating (`apt-get update`, `apt-get install`) and you are able to use ***Terminal***.
+
+
+#### Installing additional packages
+Packages that are necessary to run scripts are: `python-visual` and `python-tk`.
+Package `python-visual` is responsible for visualizing, package `python-tk` is responsible for displaying window in Viewer to allow choosing file with simulation results.
+Installation is made using `apt-get`. When terminal type:
+`sudo apt-get install python-visual` is opened, appropriate package is to be installed.
+
+![python-visual install](http://i.imgur.com/e2I4TkB.png)
+
+Accept installation. Then some packages are to be downloaded and configured.
+
+When the installation is finished, run Python console and try to load `visual` module as presented below, typing in the Python console `from visual import *`
+
+![TestingVisual](http://i.imgur.com/lOhcr7y.png)
+
+Then, try to draw a sphere: type `sphere(pos=(1,1,1), radius=1)` and press enter (or use Test_Environment_Config.py if you have cloned the repository from git). You should see a picture of a sphere (or line of spheres - see testing environment section) in separate window. 
+![](http://i.imgur.com/lTjeeNS.png)
+
+If you have not used `tk` till now, there is only one step remaining to do - install `python-tk` for Viewer. You can do so by typing in terminal `sudo apt-get install python-tk`.
+![](http://i.imgur.com/hlAbMJO.png)
+
+If you succeed - that's it - your environment is ready to use our script!
+
+#### Using scripts
+
+First, place the scripts in a place where you have appropriate rights for reading and writing. Usually home directory is a good choice. We placed directory 'ChroTe' in home directory of user named 'user'. Go to your catalog with the scripts (either in terminal or in Windows manager).
+To run the scripts you have to grant permission for executing them. You can do this using `chmod`: type `chmod +x ChroTe*.py` for Modeller and `chmod +x Viewer*.py` for Viewer (or `chmod 755 script_name.py` if you prefer numbers for granting rights). 
+
+![rights](http://i.imgur.com/AMu85iN.png)
+
+
+Then, to run the script you should type `python script_name.py`.
+That's all!
+
+This is the Modeller in action:
+![modeler](http://i.imgur.com/MIJr6xt.png)
+
+
+And this is the Viewer:
+![Viewer_in_action](http://i.imgur.com/4kI9AkH.png)
+
+Graphical windows can be closed by clicking cross mark in a top-right corner, console (if not closed) try press Ctrl+x.
+
+***Note***: You can install both packages in one turn typing `sudo apt-get install python-visual python-tk`.
+
+
+### In short
+
+* Install packages `python-visual` and, if you do not have it yet, also `python-tk`,
+* Test if you can import `visual` in Python console, then quit console,
+* Download the script file(s) from Github webpage or clone [git repo](https://github.com/Kornelch/ChroTeMoVi.git "repository"),
+* Set appropriate rights,
+* Run script(s),
+* Enjoy!
+
+
 
 ## Chromosome Territory Modeller
 The purpose of ChroTeMo is to create a model of chromosome territories distribution.
