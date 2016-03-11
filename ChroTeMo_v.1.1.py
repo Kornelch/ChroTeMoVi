@@ -176,7 +176,7 @@ for iteracje in range(0,itera):
     f.write("\n")
     f.write(str(r_j))
     f.write("\n")
-    ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, material=materials.chrome, opacity=1)
+    ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, opacity=1)
     
     gc.collect()
 
