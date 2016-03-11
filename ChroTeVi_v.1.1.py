@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 #    Copyright (C) 2015  K. Chromiński, M. Tkacz, D. Idziak, E. Bread, R. Hasterok
-#    when you used it please cite: Plos ....   
+#    when you used it please cite:  
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ print("===================================================================")
 print("Please select file with generated model (ChroTeMo output): ")
 #print("""If you find this code useful please support us and cite:
 #    Info - artyku?.
-#    (BibTeX entry can be found at the end of code). Thank you!""")
+#    (BibTeX entry ....). Thank you!""")
 
 # reading libraries
 import Tkinter, tkFileDialog
