@@ -88,14 +88,14 @@ When the installation is finished, run Python console and try to load `visual` m
 Then, try to draw a sphere: type `sphere(pos=(1,1,1), radius=1)` and press enter (or use Test_Environment_Config.py if you have cloned the repository from git). You should see a picture of a sphere (or line of spheres - see testing environment section) in separate window. 
 ![](http://i.imgur.com/lTjeeNS.png)
 
-If you have not used `tk` till now, there is only one step remaining to do - install `python-tk` for Viewer. You can do so by typing in terminal `sudo apt-get install python-tk`.
-![](http://i.imgur.com/hlAbMJO.png)
+If you have not used `tk` till now, there is only one step remaining to do - install `python-tk` for Viewer. You can do so by typing in terminal `sudo apt-get install python-tk` and install as `python-visual` previously.
 
 If you succeed - that's it - your environment is ready to use our script!
 
 #### Using scripts
 
-First, place the scripts in a place where you have appropriate rights for reading and writing. Usually home directory is a good choice. We placed directory 'ChroTe' in home directory of user named 'user'. Go to your catalog with the scripts (either in terminal or in Windows manager).
+First, place the scripts in a place where you have appropriate rights for reading and writing. You can clone github repo typing `git clone https://github.com/Kornelch/ChroTeMoVi.git` in chosen directory. Usually home directory is a good choice (here, we placed directory 'ChroTe' in home directory of user named 'user'). Go to your catalog with the scripts (either in terminal or in Windows manager).
+
 To run the scripts you have to grant permission for executing them. You can do this using `chmod`: type `chmod +x ChroTe*.py` for Modeller and `chmod +x Viewer*.py` for Viewer (or `chmod 755 script_name.py` if you prefer numbers for granting rights). 
 
 ![rights](http://i.imgur.com/AMu85iN.png)
