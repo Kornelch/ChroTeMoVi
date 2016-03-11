@@ -1,4 +1,4 @@
-#Chromosome Territory Modeler and Viewer - project repository.
+#Chromosome Territory Modeler and Viewer - project repository
 
 This page contains information about Chromosome Territory Modeller and Chromosome Territory Viewer (ChroTe suite). 
 
