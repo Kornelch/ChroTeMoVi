@@ -1,8 +1,7 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
 #    Copyright (C) 2015  K. Chromiński, M. Tkacz, D. Idziak, E. Bread, R. Hasterok
-#    when you used it please cite:    
+#    when you used it please cite: Plos ....   
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -16,9 +15,26 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+from visual import *
+import time
+import random
+import gc
+from array import *
+import sys
+import os
+from copy import deepcopy
+    
+import datetime
 
+print 'Hello'
 itera=input("How many results do you want? \n")
-for iteracje in range(0,itera):
+success_count = 0
+
+while success_count < itera:
+    
+    #label .start;
     #**************************************************************************************************
     #Program description                                                                              *
     #Simulation of chromosome teritory                                                                *
@@ -28,23 +44,18 @@ for iteracje in range(0,itera):
 
 
     # -*- coding: cp1250 -*-
-    from visual import *
-    import time
-    import random
-    import gc
-    from array import *
     
-    import datetime
+
 
     ###############################################################################
     #************************* PROGRAM PARAMETERS - can be modified *******************************
     l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by coma
     l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separeta by coma 
     chr_pair=5 #number of chromosome pairs
-    min_rad_nu=6.8 #minimal radius of nucleus
-    max_rad_nu=7 #maksimal radius of nucleus
+    min_rad_nu=6.9 #minimal radius of nucleus
+    max_rad_nu=7.3 #maksimal radius of nucleus
     min_vol_no=0.05 #minimum occupancy of nucleus by nucleolus
-    max_vol_no=0.15 #maksimum occupancy of nucleus by nucleolus
+    max_vol_no=0.13 #maksimum occupancy of nucleus by nucleolus
     rad_bead=0.5 #radius of beads
     eps_1=0.004 #admissible distance from the beads with the same chromosome
     eps_2=0.05 #admissible distance from the beads with diffrent chromosome
@@ -176,7 +187,7 @@ for iteracje in range(0,itera):
     f.write("\n")
     f.write(str(r_j))
     f.write("\n")
-    ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, opacity=1)
+    ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, material=materials.chrome, opacity=1)
     
     gc.collect()
 
@@ -224,8 +235,7 @@ for iteracje in range(0,itera):
             xyz[2][nr_k]=z
             k=0
     #function to generate starting points - centromeres
-    def centromere():
-        
+    def centromere():        
         global xyz, R, rad_bead, x_j, y_j, z_j
         for i in range (0,chr_pair*2):
             ij=i+(chr_pair*2)
@@ -328,7 +338,7 @@ for iteracje in range(0,itera):
             k=0
             
         
-    def bead_generate(nr_k_1, ty, dl_ch):
+    def bead_generate(nr_k_1, ty, dl_ch, max_iter=10000):
         global licznik
         global nr_k
         global y
@@ -349,6 +359,7 @@ for iteracje in range(0,itera):
         
         nr_k=nr_k_1
         k=0
+        k_4=0
         k_1=0
         k_2=0
         k_3=ind+1
@@ -356,8 +367,15 @@ for iteracje in range(0,itera):
             k=1
             k_1=k_1+1
             k_2=0
-            
-            if (ty>dl_ch or k_1>1000):
+            k_4=k_4+1
+            if (k_4>max_iter):
+                # print("Error 101 - Please restart Program")
+                #goto .restart
+                # python = sys.executable
+                # os.execl(python, python, * sys.argv)
+                return False
+                
+            if (ty>dl_ch or k_1>100000):
                 
                 while (k_2==0):
                     k_3=random.randrange(ind)
@@ -382,6 +400,23 @@ for iteracje in range(0,itera):
             dist_precurs()
             if (k==1):
                 is_in_nu(nr_k)
+        return True
+
+
+    def bead_generate_wrap(nr_k_1, ty, dl_ch): #function to restart program 
+        global xyz
+        success = False
+        for i in range(1):
+            xyz_copy = deepcopy(xyz)
+            if bead_generate(nr_k_1, ty, dl_ch, max_iter=1000000) == True:
+                success = True
+                break
+            else:
+                print 'Restarting'
+                xyz = xyz_copy
+        return success
+                
+        
            
     # ********************************* END Function *****************************************************
 
@@ -389,6 +424,7 @@ for iteracje in range(0,itera):
     print("RUN...")
     centromere() 
 
+    do_break = False
     for i in range (0,max(l_arm_d)+1):
         print('checking '+str(i))
         rate(5)
@@ -397,8 +433,14 @@ for iteracje in range(0,itera):
                 
                 bead(xyz[0][n_i],xyz[1][n_i],xyz[2][n_i],k_kol[n_i][0],k_kol[n_i][1], k_kol[n_i][2], k_kol[n_i][3]) 
                 kr[n_i]=kr[n_i]+1 
-                bead_generate(n_i,ty[n_i],l_ch[n_i]) 
-                ty[n_i]=ty[n_i]+1 
+                if bead_generate_wrap(n_i,ty[n_i],l_ch[n_i]) == False:                    
+                    do_break = True
+                    break
+                ty[n_i]=ty[n_i]+1
+        if do_break:
+            break
+    if do_break:
+        continue
     f.write(str(ind+1))
     f.write("\n")
     for i in range(0, ind+1):
@@ -408,3 +450,4 @@ for iteracje in range(0,itera):
 
     f.close()  
     print("FINISH")
+
