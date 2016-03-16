@@ -19,7 +19,7 @@ Our scripts also use libraries: `Tkinter`, `tkFileDialog`, `time`, `random`, `gc
 
 Scripts has been tested to run on:
 * Windows 7, Windows 8, Windows 8.1 64 bit with Python 2.7.9 and Vpython 2.7-6.11
-* MacOS 2.7.10 and Vpython 2.7.6.11
+* MacOS 10.11.3, Python 2.7.11 and Vpython 2.7-6.11
 * Debian-based distribution (Debian 8.3 and LMDE2) with default Python interpreter (Python 2.7.9 [GCC4.9.2] and `python-visual` package, accessible directly via `apt-get` from debian repository mirrors.
 
 If you are using Linux, probably you have Python already installed.
