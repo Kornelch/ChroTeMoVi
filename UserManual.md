@@ -24,12 +24,29 @@ Scripts has been tested to run on:
 
 If you are using Linux, probably you have Python already installed.
 See [Python](https://wiki.python.org/moin/BeginnersGuide/Download) and libraries [VPython](http://vpython.org/) documentation to learn how to install the necessary software or to section "Notes for Linux users" below.
+Installation for Mac OS users are described in "Notes for Mac users" section.
 
 Minimal hardware requirements are determined by requirements of Python and VPython. However, because of the visualisation, probably it will be more comfortable if you have an additional graphics card - not only the one integrated with the mainboard.
 
-##Installation
+## Downloading ChroTe Suite
 
-### Notes for Windows users
+Source code and other files (ReadMe, UserManual, SatelliteArticles) are located in Github repository.
+
+To download files from Github, clone repository, or navigate to address https://github.com/Kornelch/ChroTeMoVi and download archive - see picture below.
+
+![Download](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DownloadFromGithub.jpg)
+
+If you do not know Git and/or want to learn more about Git you can take a [15 minutes course from Code School](https://try.github.io/levels/1/challenges/1 "CodeSchoolGit"), take a look at this short [tutorial](http://rogerdudler.github.io/git-guide/ "gitguide") or read more at [TutorialsPoint](http://www.tutorialspoint.com/git/git_basic_concepts.htm "tutorialspointGit").
+If you rather prefer to watch than read, you can watch [this](https://www.youtube.com/watch?v=Fwdg8-thBAc "git webinar") webinar about Git and version control.
+
+##Python and Visual Python Library Installation
+Installation slightly differs in different operating systems, so below you can find information concerning certain system.
+
+### Notes for Windows Users
+First of all, download and install Python and VPython. Steps are described [here](http://vpython.org/contents/download_windows.html "installationWin").
+
+Pay attention to use `VIDLE`, not usual `IDLE`.
+
 After downloading and installing necessary software and libraries you can test your environment.
 For that purpose you should find icon for `VIDLE`,
 
@@ -54,24 +71,28 @@ When you press the right mouse button and move the mouse you should be able to r
 
 With the use of the central mouse button you should be able to zoom the view in and out.
 
-To download files from Github, clone repository (or navigate to address https://github.com/Kornelch/ChroTeMoVi and download archive - see picture below).
-
-![Download](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DownloadFromGithub.jpg)
-
 If you succeed, ChroTeMo and ChroTeVi should now run on your computer.
 
-### Notes for Linux users
-If you are an advanced Linux user, see "In short" section below.
+### Notes for Linux Users
+If you are an advanced Linux user, see "In short" section at the end of this section.
 
 
-Our application does not use any sophisticated parameters from VPython, so it should work even on the old library, accessible in default Linux package systems. According to [Vpython webpage](http://vpython.org/contents/download_linux.html) it is recommended to use the newest version, but it requires more effort: either run through Wine or build from the source. This should change in the [near future](http://vpython.org/contents/announcements/evolution.html  "future") when VPython will use WebGL or [Jupyter notebooks](http://jupyter.org/ "Jupyter project").
+Our application does not use any sophisticated parameters from VPython, so it should work on the old library, accessible in default Linux package systems and default repositories. According to [Vpython webpage](http://vpython.org/contents/download_linux.html) it is recommended to use the newest version, but it requires more effort: either run through Wine or build from the source. This should change in the [near future](http://vpython.org/contents/announcements/evolution.html  "future") when VPython will use WebGL or [Jupyter notebooks](http://jupyter.org/ "Jupyter project").
+
+We tested whether visual itself runs on Jupyter Notebook, and the result is as below. But we did not tested ChroTe suite in Jupyter notebooks yet.
+
+![visual in Jupyter notebook](http://i.imgur.com/ZFJ4Llc.jpg)
 
 In this manual we show how to run our scripts under Debian 8.3, default Python installation, and basic version of VPython.
+
 ![Debian and Python version](http://i.imgur.com/phDtv4Q.png)
+
+You can check, if you do note have python-visual library installed (as dependency of some other application). First, open terminal and call Python console (just type `python` and press Enter in Terminal). Then type `from visual import *` and press Enter. If you see error message, you need to install library, so follow further steps.
+
 Before you start, make sure that your network connection is up and running. We  also assume that you have working Linux, capable for updating (`apt-get update`, `apt-get install`) and you are able to use ***Terminal***.
 
 
-#### Installing additional packages
+#### Installing Additional packages
 Packages that are necessary to run scripts are: `python-visual` and `python-tk`.
 Package `python-visual` is responsible for visualizing, package `python-tk` is responsible for displaying window in Viewer to allow choosing file with simulation results.
 Installation is made using `apt-get`. When terminal type:
@@ -85,14 +106,15 @@ When the installation is finished, run Python console and try to load `visual` m
 
 ![TestingVisual](http://i.imgur.com/lOhcr7y.png)
 
-Then, try to draw a sphere: type `sphere(pos=(1,1,1), radius=1)` and press enter (or use Test_Environment_Config.py if you have cloned the repository from git). You should see a picture of a sphere (or line of spheres - see testing environment section) in separate window. 
+Now, there should be no error message (notice the difference with previous visual import screendump). Then, try to draw a sphere: type `sphere(pos=(1,1,1), radius=1)` and press Enter (or use Test_Environment_Config.py if you have cloned the repository from git). You should see a picture of a sphere (or line of spheres - see testing environment section) in separate window. 
+
 ![](http://i.imgur.com/lTjeeNS.png)
 
 If you have not used `tk` till now, there is only one step remaining to do - install `python-tk` for Viewer. You can do so by typing in terminal `sudo apt-get install python-tk` and install as `python-visual` previously.
 
 If you succeed - that's it - your environment is ready to use our script!
 
-#### Using scripts
+#### Using ChroTe Suite Scripts
 
 First, place the scripts in a place where you have appropriate rights for reading and writing. You can clone github repo typing `git clone https://github.com/Kornelch/ChroTeMoVi.git` in chosen directory. Usually home directory is a good choice (here, we placed directory 'ChroTe' in home directory of user named 'user'). Go to your catalog with the scripts (either in terminal or in Windows manager).
 
@@ -100,41 +122,112 @@ To run the scripts you have to grant permission for executing them. You can do t
 
 ![rights](http://i.imgur.com/AMu85iN.png)
 
-
 Then, to run the script you should type `python script_name.py`.
 That's all!
 
 This is the Modeller in action:
 ![modeler](http://i.imgur.com/MIJr6xt.png)
 
-
 And this is the Viewer:
 ![Viewer_in_action](http://i.imgur.com/4kI9AkH.png)
+
+For detailed instruction for using ChroTe script suite see Sections for ChroTeMo and ChroTeVi.
 
 Graphical windows can be closed by clicking cross mark in a top-right corner, console (if not closed) try press Ctrl+x.
 
 ***Note***: You can install both packages in one turn typing `sudo apt-get install python-visual python-tk`.
 
 
-### In short
+#### In Short
 
 * Install packages `python-visual` and, if you do not have it yet, also `python-tk`,
 * Test if you can import `visual` in Python console, then quit console,
 * Download the script file(s) from Github webpage or clone [git repo](https://github.com/Kornelch/ChroTeMoVi.git "repository"),
 * Set appropriate rights,
-* Run script(s),
-* Enjoy!
+* Run script(s).
+
+Enjoy!
+
+### Notes for Mac OS Users
+*Acknowledgement: We want to thank Damian Skipioł for checking installation and running of our scripts on MacOS.*
+
+Testing environment was MacOS in version 10.11.3.
+
+![MacOsVersion](http://i.imgur.com/0XBqlu8.png)
+
+Installation has been made according instructions on [Visual Python webpage](https://www.python.org/downloads/release/python-2711/ "Vpython webpage") concerning MacOS.
+
+On [this page](https://www.python.org/download/mac/tcltk/ "Mac-TclTk") you can find appropriate installers for your OS X version.
+
+![choice for mac](http://i.imgur.com/M4ctddJ.jpg)
+
+In our case Python 2.7.11 has been chosen. After downloading install Python:
+
+![MacPyInstall](http://i.imgur.com/Rgj9jTM.jpg)
+
+After installation Python console should looks like on the following image
+
+![pytest1](http://i.imgur.com/QNUO6Fg.png)
+
+As you can see, there were warning displayed, informing us that current version of Tcl/Tk may be unstable. (If you do not see this warning, you can skip next few steps regarding Tcl/Tk installation).
+
+Clicking on appropriate link seen on first screendump in this section (or in this sentence) you should be redirected to [Activestate  download page](http://www.activestate.com/activetcl/downloads "activetclDownload"), wher you can download Active Tcl package for your OS X. Download appropriate package and install it.
+
+![ActiveTCL installation](http://i.imgur.com/uEKZLEE.png)
+
+When succeed, you should see information similar to the following
+
+![TCLSucceed](http://i.imgur.com/QdGPoPs.jpg)
+
+Run again Python console, and check if there is still warning. If all is OK, you should see just clear console.
+![python with tcl](http://i.imgur.com/2dD7K5l.png)
+
+Notice, that there is no warning.
+You can try to use visual library .
+Type in the Python console `from visual import *` and press Enter. Probably you do not have it, and you will see error message:
+
+![MacVisualCheck](http://i.imgur.com/wV1Qr1o.jpg)
+
+Close Python console.
+
+So, we need to download and install Visual library (VPython-Mac-Py2.7-6.11 package) from [this](http://www.vpython.org/contents/download_mac.html "visual downloadMac") link.
+
+Install downloaded package.
+
+![installVisualMac](http://i.imgur.com/6OO6H20.png)
+
+After installation open VIDLE-Py2.7 and type again `from visual import *` and press Enter.
+You should see no error message this time. So type `sphere()` and press Enter. 
+You should see window with sphere drawn as shown below.
+
+![VisualMacSphere test](http://i.imgur.com/T0rUqnD.jpg)
+
+Congratulations, it seems that you have Python with Visual up and running!.
+
+Then you need files of ChroTe Suite. You can either download copy of repository in zip file via web browser or clone git repository.
+Save files at location of your own choice. Then open VIDLE-Py2.7 and run `Test_Environment_Config.py` file from your location. you should see a line of beads:
+
+![chroteTest](http://i.imgur.com/k8i0VTm.jpg)
+
+If this succeed, you should be able to run and use ChroTeMo or ChroTeVi (see next section).
+
+![ChroTemoRun](http://i.imgur.com/ugWHmHT.jpg) 
+
+and see steps of building a model
+
+![ChrotemoRunGraph](http://i.imgur.com/sHoYD8A.jpg)
+
+That's all. Enjoy!
 
 
-
-## Chromosome Territory Modeller
+## Chromosome Territory Modeler
 The purpose of ChroTeMo is to create a model of chromosome territories distribution.
 Chromosome Territory Modeller (reffered later as ChroTeMo) is a file in repository with the name ChroTeMo_v.X.py, where where X denotes the number of version. 
 
 When you have source code of script downloaded, you can either run or customize configuration of Chromosome Territory Modeller before run.
 
 
-## Setting Up ChroTeMo parameters
+### Setting Up ChroTeMo parameters
 In our model there are some parameters, which can help to tailor and tune up the code for the simulation of chromosome territories arrangement in different species. When adjusting the implementation for a given specie the following parameters can be set up.
 
 To simulate the model of chromosome territories arrangement, you can set up the parameters  mentioned below to fit/tune the model to your needs. This can be done by direct editing of the script file. The parameters are listed at the beginning of the script file. 
@@ -203,9 +296,7 @@ For the domains that are drawn in the phase of chromatin decondensation, the coo
 
 
 
-
-
-## Running ChroTeMo
+### Running ChroTeMo
 
 Open file `ChroTeMo` with VIDLE in the same way as described in "Testing Software Environment".
 ChroTeMo can work in a half-batch mode: you can generate a few to a dozen models with one run.
