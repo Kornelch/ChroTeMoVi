@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #    Copyright (C) 2015  K. Chromiński, M. Tkacz, D. Idziak, E. Bread, R. Hasterok
-#    when you used it please cite: Plos ....   
+#    when you used it please cite: ... 
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by

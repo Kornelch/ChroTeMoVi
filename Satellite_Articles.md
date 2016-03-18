@@ -1,5 +1,8 @@
-This is list of additional resources where ChroTe suite has been used:
+This is list of additional resources (the newest first) related to Chromosome Territory research basing on which we define parameters of model for Brachypodium or where ChroTe suite has been used for experiments:
 
-1. aaa
-2. ROBASZKIEWICZ E., IDZIAK-HELMCKE D., TKACZ M., CHROMINSKI K., HASTEROK R. 2016. The arrangement of interphase chromosome in the nuclei of Brachypodium species. Plant Model Species: Fundamentals and Applications. Vienna, Austria, 4 - 5 February 2016. 
-3. bbb
+1. ROBASZKIEWICZ E, IDZIAK-HELMCKE D, TKACZ M, CHROMINSKI K, HASTEROK R. **(2016)** The arrangement of interphase chromosome in the nuclei of Brachypodium species. Plant Model Species: Fundamentals and Applications. Vienna, Austria, 4 - 5 February 2016.
+2. HASTEROK R, BETEKHTIN A, BOROWSKA-ZUCHOWSKA N, BRASZEWSKA-ZALEWSKA A, IDZIAK-HELMCKE D, ROBASZKIEWICZ E, WOLNY E **(2015)** Molecular cytogenetics in the genus Brachypodium. In: Plant Genetics and Genomics: Crops and Models. JP Vogel (ed.), Springer, pp: 1-16 
+3.  IDZIAK D, HASTEROK R, BETEKHTIN A, BOROWSKA-ZUCOWSKA N,	BRASZEWSKA-ZALEWSKA A,	CHWIALKOWSKA K,	GORKIEWICZ R, KUS A, KWASNIEWSKA J,	KWASNIEWSKI M, ROBASZKIEWICZ E,	SIWINSKA D,	WOLNY E, CHROMIŃSKI K, TKACZ M **(2015)** Brachypodium distachyon – a model plant to study grass genome structure, dynamics and evolution. 	BioTechnologia. Journal of Biotechnology Computational Biology and Bionanotechnology, 2015 t. 96 No1 p 43.
+4. IDZIAK D, ROBASZKIEWICZ E, TKACZ M, CHROMIŃSKI K, HASTEROK R **(2015)** Chromosome territory arrangement in Brachypodium: FISH and  computational modelling analysis.  [International Brachypodium Conference](https://brachy2015.umass.edu/sites/brachy2015.umass.edu/files/Brachy2015FinalProgram.pdf "linkToPDF"), 16-19 June 2015, Amherst, Massachusetts
+5. CATALAN P, CHALHOUB B, CHOCHOIS V, GARVIN D, HASTEROK R, MANZANEDA A, MUR L, PECCHIONI N, RASMUSSEN S, VOGEL J, VOXEUR A **(2014)** Update on the genomics and basic biology of Brachypodium. Trends in Plant Science 19: 414-418 
+
