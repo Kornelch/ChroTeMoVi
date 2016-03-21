@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#    Copyright (C) 2015  K. Chromiński, M. Tkacz, D. Idziak, E. Bread, R. Hasterok
+#    Copyright (C) 2015  K. Chromiński, M. Tkacz, D. Idziak-Helmcke, E. Robaszkiewicz, R. Hasterok
 #    when you used it please cite: ... 
 #
 #    This program is free software: you can redistribute it and/or modify
