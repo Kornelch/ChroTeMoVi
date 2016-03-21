@@ -18,7 +18,7 @@ Both scripts are written in Python. For visualization purposes we use VPython.
 Our scripts also use libraries: `Tkinter`, `tkFileDialog`, `time`, `random`, `gc`, `array` and `datetime`.
 
 Scripts has been tested to run on:
-* Windows 7, Windows 8, Windows 8.1 64 bit with Python 2.7.9 and Vpython 2.7-6.11
+* Windows 7, Windows 8, Windows 8.1 64 bit with Python 2.7.9 and VPython 2.7-6.11
 * MacOS 10.11.3, Python 2.7.11 and Vpython 2.7-6.11
 * Debian-based distribution (Debian 8.3 and LMDE2) with default Python interpreter (Python 2.7.9 [GCC4.9.2] and `python-visual` package, accessible directly via `apt-get` from debian repository mirrors.
 
@@ -32,7 +32,7 @@ Minimal hardware requirements are determined by requirements of Python and VPyth
 
 Source code and other files (ReadMe, UserManual, SatelliteArticles) are located in Github repository.
 
-To download files from Github, clone repository, or navigate to address https://github.com/Kornelch/ChroTeMoVi and download archive - see picture below.
+To download files from Github, clone repository, or navigate to the address https://github.com/Kornelch/ChroTeMoVi and download archive - see picture below.
 
 ![Download](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DownloadFromGithub.jpg)
 
@@ -40,15 +40,15 @@ If you do not know Git and/or want to learn more about Git you can take a [15 mi
 If you rather prefer to watch than read, you can watch [this](https://www.youtube.com/watch?v=Fwdg8-thBAc "git webinar") webinar about Git and version control.
 
 ##Python and Visual Python Library Installation
-Installation slightly differs in different operating systems, so below you can find information concerning certain system.
+Installation slightly differs in different operating systems, so below you can find information concerning particular systems.
 
 ### Notes for Windows Users
-First of all, download and install Python and VPython. Steps are described [here](http://vpython.org/contents/download_windows.html "installationWin").
+First, download and install Python and VPython. Steps are described [here](http://vpython.org/contents/download_windows.html "installationWin").
 
 Pay attention to use `VIDLE`, not usual `IDLE`.
 
 After downloading and installing necessary software and libraries you can test your environment.
-For that purpose you should find icon for `VIDLE`,
+To do that, you should find icon for `VIDLE`,
 
 ![vidle](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/VIdle.jpg)
 
@@ -61,7 +61,7 @@ and run it
 
 ![Run test](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestRun.jpg)
 
-You should see a picture similiar to the one presented below.
+You should see a picture similar to the one presented below.
 
 ![displayedTest](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DisplayedCanvasTest.jpg)
 
@@ -79,7 +79,7 @@ If you are an advanced Linux user, see "In short" section at the end of this sec
 
 Our application does not use any sophisticated parameters from VPython, so it should work on the old library, accessible in default Linux package systems and default repositories. According to [Vpython webpage](http://vpython.org/contents/download_linux.html) it is recommended to use the newest version, but it requires more effort: either run through Wine or build from the source. This should change in the [near future](http://vpython.org/contents/announcements/evolution.html  "future") when VPython will use WebGL or [Jupyter notebooks](http://jupyter.org/ "Jupyter project").
 
-We tested whether visual itself runs on Jupyter Notebook, and the result is as below. But we did not tested ChroTe suite in Jupyter notebooks yet.
+We tested whether visual itself runs on Jupyter Notebook, and the result is shown below. However, we did not test ChroTe Suite in Jupyter notebooks yet.
 
 ![visual in Jupyter notebook](http://i.imgur.com/ZFJ4Llc.jpg)
 
@@ -87,7 +87,7 @@ In this manual we show how to run our scripts under Debian 8.3, default Python i
 
 ![Debian and Python version](http://i.imgur.com/phDtv4Q.png)
 
-You can check, if you do note have python-visual library installed (as dependency of some other application). First, open terminal and call Python console (just type `python` and press Enter in Terminal). Then type `from visual import *` and press Enter. If you see error message, you need to install library, so follow further steps.
+You can check if you do not have python-visual library installed (as dependency of some other application). First, open the Terminal and call Python console (just type `python` and press Enter in Terminal). Then type `from visual import *` and press Enter. If you see error message, you need to install library, so follow further steps.
 
 Before you start, make sure that your network connection is up and running. We  also assume that you have working Linux, capable for updating (`apt-get update`, `apt-get install`) and you are able to use ***Terminal***.
 
@@ -161,15 +161,15 @@ On [this page](https://www.python.org/download/mac/tcltk/ "Mac-TclTk") you can f
 
 ![choice for mac](http://i.imgur.com/M4ctddJ.jpg)
 
-In our case Python 2.7.11 has been chosen. After downloading install Python:
+In our case Python 2.7.11 has been chosen. After downloading, install Python:
 
 ![MacPyInstall](http://i.imgur.com/Rgj9jTM.jpg)
 
-After installation Python console should looks like on the following image
+After installation Python, the console should looks like in the following image
 
 ![pytest1](http://i.imgur.com/QNUO6Fg.png)
 
-As you can see, there were warning displayed, informing us that current version of Tcl/Tk may be unstable. (If you do not see this warning, you can skip next few steps regarding Tcl/Tk installation).
+As you can see, there was a warning displayed, informing us that the current version of Tcl/Tk may be unstable. (If you do not see this warning, you can skip next few steps regarding Tcl/Tk installation).
 
 Clicking on appropriate link seen on first screendump in this section (or in this sentence) you should be redirected to [Activestate  download page](http://www.activestate.com/activetcl/downloads "activetclDownload"), wher you can download Active Tcl package for your OS X. Download appropriate package and install it.
 
@@ -182,7 +182,7 @@ When succeed, you should see information similar to the following
 Run again Python console, and check if there is still warning. If all is OK, you should see just clear console.
 ![python with tcl](http://i.imgur.com/2dD7K5l.png)
 
-Notice, that there is no warning.
+Notice that there is no warning.
 You can try to use visual library .
 Type in the Python console `from visual import *` and press Enter. Probably you do not have it, and you will see error message:
 
@@ -209,7 +209,7 @@ Save files at location of your own choice. Then open VIDLE-Py2.7 and run `Test_E
 
 ![chroteTest](http://i.imgur.com/k8i0VTm.jpg)
 
-If this succeed, you should be able to run and use ChroTeMo or ChroTeVi (see next section).
+If this succeeds, you should be able to run and use ChroTeMo or ChroTeVi (see next section).
 
 ![ChroTemoRun](http://i.imgur.com/ugWHmHT.jpg) 
 
@@ -220,7 +220,7 @@ and see steps of building a model
 That's all. Enjoy!
 
 
-## Chromosome Territory Modeler
+## Chromosome Territory Modeller
 The purpose of ChroTeMo is to create a model of chromosome territories distribution.
 Chromosome Territory Modeller (reffered later as ChroTeMo) is a file in repository with the name ChroTeMo_v.X.py, where where X denotes the number of version. 
 
