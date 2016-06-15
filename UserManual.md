@@ -299,13 +299,13 @@ For the domains that are drawn in the phase of chromatin decondensation, the coo
 ### Running ChroTeMo
 
 Open file `ChroTeMo` with VIDLE in the same way as described in "Testing Software Environment".
-ChroTeMo can work in a half-batch mode: you can generate a few to a dozen models with one run.
+ChroTeMo allows to generate more than one model in one run.
+All you have to do is to run the script. It can be done in the same way as described above, when testing software environment.
 
 In the beginning the first (and last) question appears: "How many results do you want?" You should write any reasonable (in terms of computational time) number denoting the number of models to be created.  
-All you have to do is to run the script. It can be done in the same way as described above, when testing software environment.
-Wait a while and ... enjoy your model!
+If you write 1 (one) - one model will be created and you can also see  visualisation. For number greater than one, Modeler works in "batch" mode and will write model parameters into files to be later viewed in Viewer.
 
-When you close ChroTeMo, the windows with visualization will close, but the file containing the model description is automatically saved into the working directory. Files hare named according to the pattern: `workfile + data + time.txt`. 
+When you close ChroTeMo, the windows with visualization will close, but the file containing the model description is automatically saved into the working directory. Files are named according to the pattern: `workfile + data + time.txt`. 
 They can be used as the input files for ChroTeVi
 
 ## Using ChroTeVi
