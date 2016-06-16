@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UserManual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p><strong>Authors:</strong> Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok</p>
+
+<p><strong>This document is licensed under CC BY-NC-SA 4.0</strong></p>
+
+<p><em>The most recent version of User Manual is located in <a href="https://github.com/Kornelch/ChroTeMoVi/blob/master/UserManual.md">github repository</a></em></p>
+
+<h1>Chromosome Territory Modeller and Viewer: User Manual</h1>
+
+<p>This document is a User Manual for Chromosome Territory Modeller (<code>ChroTeMo</code>) and Chromosome Territory Viewer (<code>ChroTeVi</code>).
+The first one is intended to use when you want to create chromosome territory model for a specific species. It computes the parameters of modeled chromosomes, allows to preview the model and saves the results to a file. </p>
+
+<p><code>ChroTeVi</code> is designed to be a viewer - it lets you to read files created by <code>ChroTeMo</code>, display,  zoom in and out, and rotate the created model. </p>
+
+<h3>Hardware and software requirements</h3>
+
+<p>Both scripts are written in Python. For visualization purposes we use VPython. 
+Our scripts also use libraries: <code>Tkinter</code>, <code>tkFileDialog</code>, <code>time</code>, <code>random</code>, <code>gc</code>, <code>array</code> and <code>datetime</code>.</p>
+
+<p>Scripts has been tested to run on:
+* Windows 7, Windows 8, Windows 8.1 64 bit with Python 2.7.9 and VPython 2.7-6.11
+* MacOS 10.11.3, Python 2.7.11 and Vpython 2.7-6.11
+* Debian-based distribution (Debian 8.3 and LMDE2) with default Python interpreter (Python 2.7.9 [GCC4.9.2] and <code>python-visual</code> package, accessible directly via <code>apt-get</code> from debian repository mirrors.</p>
+
+<p>If you are using Linux, probably you have Python already installed.
+See <a href="https://wiki.python.org/moin/BeginnersGuide/Download">Python</a> and libraries <a href="http://vpython.org/">VPython</a> documentation to learn how to install the necessary software or to section "Notes for Linux users" below.
+Installation for Mac OS users are described in "Notes for Mac users" section.</p>
+
+<p>Minimal hardware requirements are determined by requirements of Python and VPython. However, because of the visualisation, probably it will be more comfortable if you have an additional graphics card - not only the one integrated with the mainboard.</p>
+
+<h2>Downloading ChroTe Suite</h2>
+
+<p>Source code and other files (ReadMe, UserManual, SatelliteArticles) are located in Github repository.</p>
+
+<p>To download files from Github, clone repository, or navigate to the address https://github.com/Kornelch/ChroTeMoVi and download archive - see picture below.
+<img src="http://i.imgur.com/LH2b8RH.jpg" alt="" /></p>
+
+<p>In fact, if you want only use scripts, you only need scripts located in <strong><em>_ChroTeMoVi_suite_latest</em></strong> folder.</p>
+
+<p>If you do not know Git and/or want to learn more about Git you can take a <a href="https://try.github.io/levels/1/challenges/1" title="CodeSchoolGit">15 minutes course from Code School</a>, take a look at this short <a href="http://rogerdudler.github.io/git-guide/" title="gitguide">tutorial</a> or read more at <a href="http://www.tutorialspoint.com/git/git_basic_concepts.htm" title="tutorialspointGit">TutorialsPoint</a>.
+If you rather prefer to watch than read, you can watch <a href="https://www.youtube.com/watch?v=Fwdg8-thBAc" title="git webinar">this</a> webinar about Git and version control.</p>
+
+<h2>Python and Visual Python Library Installation</h2>
+
+<p>Installation slightly differs in different operating systems, so below you can find information concerning particular systems.</p>
+
+<h3>Notes for Windows Users</h3>
+
+<p>First, download and install Python and VPython. Steps are described <a href="http://vpython.org/contents/download_windows.html" title="installationWin">here</a>.</p>
+
+<p>Pay attention to use <code>VIDLE</code>, not usual <code>IDLE</code>.</p>
+
+<p>After downloading and installing necessary software and libraries you can test your environment.
+To do that, you should find icon for <code>VIDLE</code>,
+<img src="http://i.imgur.com/WieQreC.jpg" alt="" /></p>
+
+<p>open testing script named <code>Test_Environment_Config.py</code>:
+<img src="http://i.imgur.com/aKdCs6e.jpg" alt="" /></p>
+
+<p><img src="http://i.imgur.com/yMgptMg.jpg" alt="" /></p>
+
+<p>and run it</p>
+
+<p><img src="http://i.imgur.com/Jv9V2e7.jpg" alt="" /></p>
+
+<p>You should see a picture similar to the one presented below.</p>
+
+<p><img src="http://i.imgur.com/Of6tYBA.jpg" alt="" /></p>
+
+<p>When you press the right mouse button and move the mouse you should be able to rotate this picture. </p>
+
+<p><img src="http://i.imgur.com/4PIurD6.jpg" alt="" /></p>
+
+<p>With the use of the central mouse button you should be able to zoom the view in and out.</p>
+
+<p>If you succeed, ChroTeMo and ChroTeVi should now run on your computer.</p>
+
+<h3>Notes for Linux Users</h3>
+
+<p>If you are an advanced Linux user, see "In short" section at the end of this section.</p>
+
+<p>Our application does not use any sophisticated parameters from VPython, so it should work on the old library, accessible in default Linux package systems and default repositories. According to <a href="http://vpython.org/contents/download_linux.html">Vpython webpage</a> it is recommended to use the newest version, but it requires more effort: either run through Wine or build from the source. This should change in the <a href="http://vpython.org/contents/announcements/evolution.html" title="future">near future</a> when VPython will use WebGL or <a href="http://jupyter.org/" title="Jupyter project">Jupyter notebooks</a>.</p>
+
+<p>We tested whether visual itself runs on Jupyter Notebook, and the result is shown below. However, we did not test ChroTe Suite in Jupyter notebooks yet.</p>
+
+<p><img src="http://i.imgur.com/ZFJ4Llc.jpg" alt="visual in Jupyter notebook" /></p>
+
+<p>In this manual we show how to run our scripts under Debian 8.3, default Python installation, and basic version of VPython.</p>
+
+<p><img src="http://i.imgur.com/phDtv4Q.png" alt="Debian and Python version" /></p>
+
+<p>You can check if you do not have python-visual library installed (as dependency of some other application). First, open the Terminal and call Python console (just type <code>python</code> and press Enter in Terminal). Then type <code>from visual import *</code> and press Enter. If you see error message, you need to install library, so follow further steps.</p>
+
+<p>Before you start, make sure that your network connection is up and running. We  also assume that you have working Linux, capable for updating (<code>apt-get update</code>, <code>apt-get install</code>) and you are able to use <strong><em>Terminal</em></strong>.</p>
+
+<h4>Installing Additional packages</h4>
+
+<p>Packages that are necessary to run scripts are: <code>python-visual</code> and <code>python-tk</code>.
+Package <code>python-visual</code> is responsible for visualizing, package <code>python-tk</code> is responsible for displaying window in Viewer to allow choosing file with simulation results.
+Installation is made using <code>apt-get</code>. When terminal type:
+<code>sudo apt-get install python-visual</code> is opened, appropriate package is to be installed.</p>
+
+<p><img src="http://i.imgur.com/e2I4TkB.png" alt="python-visual install" /></p>
+
+<p>Accept installation. Then some packages are to be downloaded and configured.</p>
+
+<p>When the installation is finished, run Python console and try to load <code>visual</code> module as presented below, typing in the Python console <code>from visual import *</code></p>
+
+<p><img src="http://i.imgur.com/lOhcr7y.png" alt="TestingVisual" /></p>
+
+<p>Now, there should be no error message (notice the difference with previous visual import screendump). Then, try to draw a sphere: type <code>sphere(pos=(1,1,1), radius=1)</code> and press Enter (or use Test<em>Environment</em>Config.py if you have cloned the repository from git). You should see a picture of a sphere (or line of spheres - see testing environment section) in separate window. </p>
+
+<p><img src="http://i.imgur.com/lTjeeNS.png" alt="" /></p>
+
+<p>If you have not used <code>tk</code> till now, there is only one step remaining to do - install <code>python-tk</code> for Viewer. You can do so by typing in terminal <code>sudo apt-get install python-tk</code> and install as <code>python-visual</code> previously.</p>
+
+<p>If you succeed - that's it - your environment is ready to use our script!</p>
+
+<h4>Using ChroTe Suite Scripts</h4>
+
+<p>First, place the scripts in a place where you have appropriate rights for reading and writing. You can clone github repo typing <code>git clone https://github.com/Kornelch/ChroTeMoVi.git</code> in chosen directory. Usually home directory is a good choice (here, we placed directory 'ChroTe' in home directory of user named 'user'). Go to your catalog with the scripts (either in terminal or in Windows manager).</p>
+
+<p>To run the scripts you have to grant permission for executing them. You can do this using <code>chmod</code>: type <code>chmod +x ChroTe*.py</code> for Modeller and <code>chmod +x Viewer*.py</code> for Viewer (or <code>chmod 755 script_name.py</code> if you prefer numbers for granting rights). </p>
+
+<p><img src="http://i.imgur.com/AMu85iN.png" alt="rights" /></p>
+
+<p>Then, to run the script you should type <code>python script_name.py</code>.
+That's all!</p>
+
+<p>This is the Modeller in action:
+<img src="http://i.imgur.com/MIJr6xt.png" alt="modeler" /></p>
+
+<p>And this is the Viewer:
+<img src="http://i.imgur.com/4kI9AkH.png" alt="Viewer<em>in</em>action" /></p>
+
+<p>For detailed instruction for using ChroTe script suite see Sections for ChroTeMo and ChroTeVi.</p>
+
+<p>Graphical windows can be closed by clicking cross mark in a top-right corner, console (if not closed) try press Ctrl+x.</p>
+
+<p><strong><em>Note</em></strong>: You can install both packages in one turn typing <code>sudo apt-get install python-visual python-tk</code>.</p>
+
+<h4>In Short</h4>
+
+<ul>
+<li>Install packages <code>python-visual</code> and, if you do not have it yet, also <code>python-tk</code>,</li>
+<li>Test if you can import <code>visual</code> in Python console, then quit console,</li>
+<li>Download the script file(s) from Github webpage or clone <a href="https://github.com/Kornelch/ChroTeMoVi.git" title="repository">git repo</a>,</li>
+<li>Set appropriate rights,</li>
+<li>Run script(s).</li>
+</ul>
+
+<p>Enjoy!</p>
+
+<h3>Notes for Mac OS Users</h3>
+
+<p><em>Acknowledgement: We want to thank Damian Skipioł for checking installation and running of our scripts on MacOS.</em></p>
+
+<p>Testing environment was MacOS in version 10.11.3.</p>
+
+<p><img src="http://i.imgur.com/0XBqlu8.png" alt="MacOsVersion" /></p>
+
+<p>Installation has been made according instructions on <a href="https://www.python.org/downloads/release/python-2711/" title="Vpython webpage">Visual Python webpage</a> concerning MacOS.</p>
+
+<p>On <a href="https://www.python.org/download/mac/tcltk/" title="Mac-TclTk">this page</a> you can find appropriate installers for your OS X version.</p>
+
+<p><img src="http://i.imgur.com/M4ctddJ.jpg" alt="choice for mac" /></p>
+
+<p>In our case Python 2.7.11 has been chosen. After downloading, install Python:</p>
+
+<p><img src="http://i.imgur.com/Rgj9jTM.jpg" alt="MacPyInstall" /></p>
+
+<p>After installation Python, the console should looks like in the following image</p>
+
+<p><img src="http://i.imgur.com/QNUO6Fg.png" alt="pytest1" /></p>
+
+<p>As you can see, there was a warning displayed, informing us that the current version of Tcl/Tk may be unstable. (If you do not see this warning, you can skip next few steps regarding Tcl/Tk installation).</p>
+
+<p>Clicking on appropriate link seen on first screendump in this section (or in this sentence) you should be redirected to <a href="http://www.activestate.com/activetcl/downloads" title="activetclDownload">Activestate  download page</a>, wher you can download Active Tcl package for your OS X. Download appropriate package and install it.</p>
+
+<p><img src="http://i.imgur.com/uEKZLEE.png" alt="ActiveTCL installation" /></p>
+
+<p>When succeed, you should see information similar to the following</p>
+
+<p><img src="http://i.imgur.com/QdGPoPs.jpg" alt="TCLSucceed" /></p>
+
+<p>Run again Python console, and check if there is still warning. If all is OK, you should see just clear console.
+<img src="http://i.imgur.com/2dD7K5l.png" alt="python with tcl" /></p>
+
+<p>Notice that there is no warning.
+You can try to use visual library .
+Type in the Python console <code>from visual import *</code> and press Enter. Probably you do not have it, and you will see error message:</p>
+
+<p><img src="http://i.imgur.com/wV1Qr1o.jpg" alt="MacVisualCheck" /></p>
+
+<p>Close Python console.</p>
+
+<p>So, we need to download and install Visual library (VPython-Mac-Py2.7-6.11 package) from <a href="http://www.vpython.org/contents/download_mac.html" title="visual downloadMac">this</a> link.</p>
+
+<p>Install downloaded package.</p>
+
+<p><img src="http://i.imgur.com/6OO6H20.png" alt="installVisualMac" /></p>
+
+<p>After installation open VIDLE-Py2.7 and type again <code>from visual import *</code> and press Enter.
+You should see no error message this time. So type <code>sphere()</code> and press Enter. 
+You should see window with sphere drawn as shown below.</p>
+
+<p><img src="http://i.imgur.com/T0rUqnD.jpg" alt="VisualMacSphere test" /></p>
+
+<p>Congratulations, it seems that you have Python with Visual up and running!.</p>
+
+<p>Then you need files of ChroTe Suite. You can either download copy of repository in zip file via web browser or clone git repository.
+Save files at location of your own choice. Then open VIDLE-Py2.7 and run <code>Test_Environment_Config.py</code> file from your location. you should see a line of beads:</p>
+
+<p><img src="http://i.imgur.com/k8i0VTm.jpg" alt="chroteTest" /></p>
+
+<p>If this succeeds, you should be able to run and use ChroTeMo or ChroTeVi (see next section).</p>
+
+<p><img src="http://i.imgur.com/ugWHmHT.jpg" alt="ChroTemoRun" /> </p>
+
+<p>and see steps of building a model</p>
+
+<p><img src="http://i.imgur.com/sHoYD8A.jpg" alt="ChrotemoRunGraph" /></p>
+
+<p>That's all. Enjoy!</p>
+
+<h2>Chromosome Territory Modeller</h2>
+
+<p>The purpose of ChroTeMo is to create a model of chromosome territories distribution.
+Chromosome Territory Modeller (reffered later as ChroTeMo) is a file in repository with the name ChroTeMo_v.X.py, where where X denotes the number of version. </p>
+
+<p>When you have source code of script downloaded, you can either run or customize configuration of Chromosome Territory Modeller before run.</p>
+
+<h3>Setting Up ChroTeMo parameters</h3>
+
+<p>In our model there are some parameters, which can help to tailor and tune up the code for the simulation of chromosome territories arrangement in different species. When adjusting the implementation for a given specie the following parameters can be set up.</p>
+
+<p>To simulate the model of chromosome territories arrangement, you can set up the parameters  mentioned below to fit/tune the model to your needs. This can be done by direct editing of the script file. The parameters are listed at the beginning of the script file. 
+<strong><em>Be careful !!</em></strong> Some parameters may result in a long running time of <code>ChroTeMo</code> (when testing the parameter <code>multi</code> = 1000, the script ran for more than 3 weeks)!</p>
+
+<p>If you are unsure about parameters, just change only species specific <strong>(sp)</strong> parameters. You can experiment with the rest of parameters (<strong>(mv)</strong> - model specific) later.</p>
+
+<p>To change the parameters you should open file ChroTeMo source file. It can be done with any text editor, but it is more comfortable to use any supporting syntax colouring. After changing the parameters you should save the modified file.</p>
+
+<p>Basic parameters of the model are defined in lines from 22 to 36 in block:
+```
+  #<strong><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em></strong> PROGRAM PARAMETERS - can be modified <strong><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em></strong>
+    l<em>arm</em>c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, separated by coma
+    l<em>arm</em>d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separated by coma
+    chr<em>pair=5 #number of chromosome pairs
+    min</em>rad<em>nu=6.8 #minimum radius of nucleus
+    max</em>rad<em>nu=7 #maximum radius of nucleus
+    min</em>vol<em>no=0.05 #minimum occupancy of nucleus by nucleolus
+    max</em>vol<em>no=0.15 #maximum occupancy of nucleus by nucleolus
+    rad</em>bead=0.5 #radius of beads
+    eps<em>1=0.004 #admissible distance from the beads within the same chromosome
+    eps</em>2=0.05 #admissible distance from the beads within a different chromosome
+    trsp=1 #transparency of beads
+    multi=1 #bead number multiplier</p>
+
+<pre><code>#****************** END PROGRAM PARAMETERS *********************************
+</code></pre>
+
+<p>```</p>
+
+<p>Some parameters are used as "species specific" <strong>(sp)</strong>, some for model and visualization <strong>(mv)</strong> purposes. The meaning of parameters is as follows:</p>
+
+<ul>
+<li><code>chr_pair</code> - number (integer) of chromosome pairs <strong>(sp)</strong>. </li>
+<li><code>l_arm_c</code> - is a vector containing numbers (integers) representing length of chromome arms in condensed form. Length is counted in micrometers (the units are in micrometers: 1 domain = 0.5 micrometer). Quantity of entries should equals 2*<code>chr_pairs</code>. List in form <code>l_arm_c</code> = [1,2,3,4] means that 1st arm of 1st chromosome has length 1, 2nd arm of 1st chromosome has length 2, 1st arm of 2nd chromosome has length 3, 2nd arm of 2nd chromosome has length 4 <strong>(sp)</strong>;</li>
+<li><code>l_arm_d</code> - is a vector containing numbers (integer) representing length of chromosome arms after decondensation. Here, length is counted in Mbp (mega basepairs). Number of entries should equal 2*<code>chr_pairs</code> <strong>(sp)</strong>;</li>
+<li><code>min_rad_nu</code> - this parameter represents minimum radius of nucleus (calculated in micrometers), usually taken from experiments and/or from literature <strong>(sp)</strong>; </li>
+<li><code>max_rad_nu</code> - this parameter represents maximum radius of nucleus (calculated in micrometers), usually taken from experiments and/or from literature <strong>(sp)</strong>; </li>
+<li><code>min_vol_no</code> - this parameter is to determine the maximum percentage of nucleus volume occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature <strong>(sp)</strong>;</li>
+<li><code>max_vol_no</code> - this parameter is to determine the minimum percentage of nucleus volume occupied by nucleolus. Entry should be in range (0-1), where 0.05 means 5% and 0.15 means 15%. These values are taken from experimental results and/or from literature <strong>(sp)</strong>;</li>
+<li><code>rad_bead</code> - this parameters determines the radius of beads representing domains. Theoretically there is no limitation of the number, but it is recommended to be reasonable and take into account the radius of the nucleus for succesful model creation <strong>(mv)</strong>;</li>
+<li><code>eps_1</code> - this parameter determines the minimum distance that have to be kept between the beads in the same chromosome <strong>(mv)</strong>;</li>
+<li><code>eps_2</code> - this parameter determines the minimum distance that have to be kept between the beads of different chromosomes. It is also used to determine minimum distance to be kept between the beads and the boundaries of the nucleus and nucleolus. It is recommended that eps<em>1<eps</em>2 <strong>(mv)</strong>;</li>
+<li><code>trsp</code> - this parameter determines transparency in a range (0,1). Choose 1 if you wish the transparency off, if you choose 0 the chromosomes will not be visible <strong>(mv)</strong>;</li>
+<li><code>multi</code> - When you want to achieve more precise and detailed model of chromosome territories through more accurate impletion you can use this parameter. By default <code>multi</code>= 1 which means that one bead corresponds to one domain. When you want to fill space faithfully and with better accuracy you can increase this value ( keep in mind that this can lead to more complicated shapes of the simualted territories). For example, <code>multi</code>= 4 means that one domain will be represented by 4 spheres, <code>multi</code>=10 means that one domain will be represented as 10 spheres. <strong><em>Warning! Increasing this parameter leads to significant increase of the computational time necessary for model creation.</em></strong> <strong>(mv)</strong>; </li>
+</ul>
+
+<h3>ChroTeMo functions</h3>
+
+<p>•   <code>nucleus()</code> The purpose of this function is to create the nucleus. The nucleus is represented by a sphere , with the coordinates of the center <code>(x_nu, y_nu, z_nu)</code> = (0, 0, 0), and with the radius <em>R</em> generated in a random way from the interval &lt; <code>min_rad_nu</code>, <code>max_rad_nu</code> >;</p>
+
+<p>•   <code>nucleolus()</code> This function is used to generate the nucleolus. In the first step the radius of the nucleolus <em>r</em> is determined using parameters <code>min_vol_no</code> and <code>max_vol_no</code>;</p>
+
+<p>•   <code>centromere()</code> This function is responsible for generating the coordinates of the centromere bead centers (for all chromosomes);</p>
+
+<p>•   <code>bead()</code> This function is used to draw all new domains of all chromosomes. The input parameters for this function are domain coordinates, color (RGB color defined as a separate degree of saturation for each component), and transparency. At the initial stage of the modelling process this function is also responsible for drawing centromeres as spheres;</p>
+
+<p>•   <code>new_domain()</code> This function generates the coordinates of the new domain. 
+For domains that are drawn during building the condensed chromosomes, the new coordinates are generated based on previously, last generated coordinates (within the domain of the same arm). 
+For the domains that are drawn in the phase of chromatin decondensation, the coordinates of the next domain are determined on the basis of a randomly selected domain (referred to as a precursory domain) from all previously generated domains that constitute chromosome arms;</p>
+
+<p>•   <code>dist_bead()</code> This function is used to check whether the newly created domain does not collide with another domain within the same chromosome. The same function is also used to check whether there is not a collision with another domain within another chromosome. The only difference is in ε parameter – here ε2 (which is greater than ε1) is used;</p>
+
+<p>•   <code>dist_precurs()</code> The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain. If this condition is true, the program returns to the function <code>new_domain()</code>;</p>
+
+<h3>Running ChroTeMo</h3>
+
+<p>Open file <code>ChroTeMo</code> with VIDLE in the same way as described in "Testing Software Environment".
+ChroTeMo allows to generate more than one model in one run.
+All you have to do is to run the script. It can be done in the same way as described above, when testing software environment.</p>
+
+<p>In the beginning the first (and last) question appears: "How many results do you want?" You should write any reasonable (in terms of computational time) number denoting the number of models to be created.<br />
+If you write 1 (one) - one model will be created and you can also see  visualisation. For number greater than one, Modeler works in "batch" mode and will write model parameters into files to be later viewed in Viewer.</p>
+
+<p>When you close ChroTeMo, the windows with visualization will close, but the file containing the model description is automatically saved into the working directory. Files are named according to the pattern: <code>workfile + data + time.txt</code>. 
+They can be used as the input files for ChroTeVi</p>
+
+<h2>Using ChroTeVi</h2>
+
+<p>Load ChroTeVi script with VIDLE as mentioned above and run it in the same way as previously. 
+Then you will be asked to point to a file generated by ChroTeMo.</p>
+
+<p>Then, you will be asked some questions:</p>
+
+<ol>
+<li>Which pair of chromosomes you want to paint. You should write digits denoting the pairs to be painted. If you want to paint only one pair, the answer to the second question should be 0 (zero).</li>
+<li>The degree of transparency for the rest of the beads in a range from 0 to 1, where 0 means full transparency (beads will be invisible), 1 means no transparency.</li>
+<li>If you want to color only one pair of chromosomes,  here you can choose whether you want to paint the entire chomosome in one color or use different colors for each arm ofthe chromosome.</li>
+</ol>
+
+<p>Now you should be able to view the generated model. 
+With the use of the mouse buttons and scroll you should be able to zoom in, zoom out and rotate the model.</p>
+
+<p>That's all.
+Enjoy!</p>
+
+<h1>Appendix A</h1>
+
+<p>Algorithm pseudocode:
+```
+Input data: Model's parameters
+Result: Model of chromosome territory arrangement</p>
+
+<p>generate nucleus;
+generate nucleolus;
+generate centromeres;
+draw centromeres;
+for each arm do
+    while number of domains in arm do
+        repeat
+            generate new coordinates of domain;
+            check whether inside nucleus;
+            check collision with nucleolus;
+            check collision with beads in different chromosome;
+            check collision with other beads in own chromosome;
+        until not collision;
+        draw domain;
+     end
+end
+save bead coordinates (tab[]) to file;
+```</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
