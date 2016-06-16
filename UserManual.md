@@ -34,7 +34,7 @@ Source code and other files (ReadMe, UserManual, SatelliteArticles) are located 
 
 To download files from Github, clone repository, or navigate to the address https://github.com/Kornelch/ChroTeMoVi and download archive - see picture below.
 
-![Download](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DownloadFromGithub.jpg)
+![Download](https://github.com/Kornelch/ChroTeMoVi/tree/master/Media/ScreenShots/DownloadFromGithub.jpg)
 
 If you do not know Git and/or want to learn more about Git you can take a [15 minutes course from Code School](https://try.github.io/levels/1/challenges/1 "CodeSchoolGit"), take a look at this short [tutorial](http://rogerdudler.github.io/git-guide/ "gitguide") or read more at [TutorialsPoint](http://www.tutorialspoint.com/git/git_basic_concepts.htm "tutorialspointGit").
 If you rather prefer to watch than read, you can watch [this](https://www.youtube.com/watch?v=Fwdg8-thBAc "git webinar") webinar about Git and version control.
@@ -50,24 +50,24 @@ Pay attention to use `VIDLE`, not usual `IDLE`.
 After downloading and installing necessary software and libraries you can test your environment.
 To do that, you should find icon for `VIDLE`,
 
-![vidle](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/VIdle.jpg)
+![vidle](https://github.com/Kornelch/ChroTeMoVi/tree/master/Media/ScreenShots/Media/VIdle.jpg)
 
 open testing script named `Test_Environment_Config.py`:
 
-![open in vidle](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestOpen.jpg)
-![testChoose](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestChoose.jpg)
+![open in vidle](https://github.com/Kornelch/ChroTeMoVi/tree/master/Media/ScreenShots/TestOpen.jpg)
+![testChoose](https://github.com/Kornelch/ChroTeMoVi/tree/master/Media/ScreenShots/TestChoose.jpg)
 
 and run it
 
-![Run test](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/TestRun.jpg)
+![Run test](https://github.com/Kornelch/ChroTeMoVi/tree/master/Media/ScreenShots/TestRun.jpg)
 
 You should see a picture similar to the one presented below.
 
-![displayedTest](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/DisplayedCanvasTest.jpg)
+![displayedTest](https://github.com/Kornelch/ChroTeMoVi/tree/master/Media/ScreenShots/DisplayedCanvasTest.jpg)
 
 When you press the right mouse button and move the mouse you should be able to rotate this picture. 
 
-![Canvas Move ](https://github.com/Kornelch/ChroTeMoVi/blob/master/Media/MoveCanvas.jpg)
+![Canvas Move ](https://github.com/Kornelch/ChroTeMoVi/tree/master/Media/ScreenShots/MoveCanvas.jpg)
 
 With the use of the central mouse button you should be able to zoom the view in and out.
 

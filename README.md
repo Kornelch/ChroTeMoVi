@@ -2,14 +2,18 @@
 
 This page contains information about Chromosome Territory Modeller and Chromosome Territory Viewer (ChroTe suite). 
 
+
+## Repository structure
+* ChroTeMo_v_X - folder contains files of Modeller in version X
+* ChroTeVi_v_X - folder contains files of Viewer in version X
+* _ChroTeMoVi_suite_latest - this folder contains the newest versions of files. This is what you need if you want to use this software.
+
 Files in the repository:
 
-- Chromosome Territory Modeller (file `ChroTeMo_vX.py`, X means version), 
-- Chromosome Territory Viever (file `ChroTeVi_vX.py`, X means version), 
-- Script for testing software environment (file `Test_Environment_Config.py`), 
-- Exemplary model file (named in convention `workfile_date_time.txt`), to be used with Viewer (ChroTeVi),
+- `Test_Environment_Config.py` - Script for testing software environment, 
 - User Manual `UserManual.md` (markdown and html versions),
 - File `Satellite_Articles.md` which contains list of additional articles that uses ChroTe script suite,
+- Exemplary file with model (named in convention `workfile_date_time.txt`), to be used as example with Viewer (ChroTeVi),
 - Readme,
 - License.
 
