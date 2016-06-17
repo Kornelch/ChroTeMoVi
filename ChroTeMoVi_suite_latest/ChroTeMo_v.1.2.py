@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#    Copyright (C) 2016  K. Chromiński, M. Tkacz, D. Idziak-Helmcke, E. Robaszkiewicz, R. Hasterok
-#    when you used it please cite: ...
+#    2016  M. Tkacz, K. Chromiński, D. Idziak-Helmcke, E. Robaszkiewicz, R. Hasterok
+#    If you find this script useful, please cite: ...
 #
 #    License GPLv3
 #    This program is free software: you can redistribute it and/or modify
@@ -17,8 +17,6 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
 from visual import *
 import time
 import csv
@@ -44,8 +42,8 @@ while success_count < itera:
 
     ###############################################################################
     #************************* PROGRAM PARAMETERS - can be modified *******************************
-    l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by coma
-    l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separeta by coma
+    l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by comma
+    l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separeta by comma
     chr_pair=5 #number of chromosome pairs
     min_rad_nu=3.5 #minimal radius of nucleus
     max_rad_nu=3.7 #maksimal radius of nucleus
@@ -60,7 +58,8 @@ while success_count < itera:
 
     #****************** END PROGRAM PARAMETERS *********************************
 
-    #****************** variables in the program - DO NOT MODIFY WITHOUT UNDERSTANDING THE CODE *****************************
+
+    #****************** script variables - DO NOT MODIFY WITHOUT UNDERSTANDING THE CODE *****************************
     licznik=0
     par_12=0.95
     lb_ram=2
@@ -106,15 +105,10 @@ while success_count < itera:
     #print(l_ram)
 
 
-
-
     kr = [0 for col in range(chr_pair*4)] #the array of chromosomes length - a counter for length
 
 
-
-
     ty=[0 for col in range(chr_pair*4)]
-
 
     #the array of colors and transparency of domains
     k_kol=[[0 for col in range(4)] for row in range(chr_pair*4)]
@@ -123,11 +117,7 @@ while success_count < itera:
                 k_kol[re][re_2]=1
             k_kol[re][3]=trsp
 
-
-
-
-    #****************** END variables in the program **********************************
-
+    #****************** END of script variables **********************************
 
 
     gc.collect()
