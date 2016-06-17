@@ -6,7 +6,7 @@ This page contains information about Chromosome Territory Modeller and Chromosom
 ## Repository structure
 * ChroTeMo_v_X - folder contains files of Modeller in version X
 * ChroTeVi_v_X - folder contains files of Viewer in version X
-* _ChroTeMoVi_suite_latest - this folder contains the newest versions of files. This is what you need if you want to use this software.
+* _ChroTeMoVi_suite_latest - this folder contains the newest versions of script files and exemplary model files. This is what you need if you want to use this software.
 
 Files in the repository:
 
