@@ -53,6 +53,7 @@ To do that, you should find icon for `VIDLE`,
 ![](http://i.imgur.com/WieQreC.jpg)
 
 open testing script named `Test_Environment_Config.py`:
+
 ![](http://i.imgur.com/aKdCs6e.jpg)
 
 ![](http://i.imgur.com/yMgptMg.jpg)
@@ -238,25 +239,26 @@ If you are unsure about parameters, just change only species specific **(sp)** p
 
 To change the parameters you should open file ChroTeMo source file. It can be done with any text editor, but it is more comfortable to use any supporting syntax colouring. After changing the parameters you should save the modified file.
 
-Basic parameters of the model are defined in lines from 22 to 36 in block:
-```
-  #************************* PROGRAM PARAMETERS - can be modified *******************************
-    l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, separated by coma
-    l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separated by coma
-    chr_pair=5 #number of chromosome pairs
-    min_rad_nu=6.8 #minimum radius of nucleus
-    max_rad_nu=7 #maximum radius of nucleus
-    min_vol_no=0.05 #minimum occupancy of nucleus by nucleolus
-    max_vol_no=0.15 #maximum occupancy of nucleus by nucleolus
-    rad_bead=0.5 #radius of beads
-    eps_1=0.004 #admissible distance from the beads within the same chromosome
-    eps_2=0.05 #admissible distance from the beads within a different chromosome
-    trsp=1 #transparency of beads
-    multi=1 #bead number multiplier
+Basic parameters of the model are defined in lines from 45 to 57 in block:
 
+    ```
+    #************************* PROGRAM PARAMETERS - can be modified *******************************
+    l_arm_c=[7,7,6,6,6,6,4,4,3,3] #length of chromosome's arm before decondensation, seperate by comma
+    l_arm_d=[37,38,29,30,25,35,20,29,8,20] #length of chromosome's arm after decondensation, separeta by comma
+    chr_pair=5 #number of chromosome pairs
+    min_rad_nu=3.5 #minimal radius of nucleus
+    max_rad_nu=3.7 #maksimal radius of nucleus
+    min_vol_no=0.05 #minimum occupancy of nucleus by nucleolus
+    max_vol_no=0.13 #maksimum occupancy of nucleus by nucleolus
+    rad_bead=0.25 #radius of beads
+    eps_1=0.004 #admissible distance from the beads with the same chromosome
+    eps_2=0.05 #admissible distance from the beads with diffrent chromosome
+    trsp=1 #transparency of non-colore beads
+    multi=1 #chromosome size multiplier
+    restart_after = 500000 #number of iterations made before restarting modeler
     #****************** END PROGRAM PARAMETERS *********************************
-  
- ```
+      
+     ```
 
 Some parameters are used as "species specific" **(sp)**, some for model and visualization **(mv)** purposes. The meaning of parameters is as follows:
 
@@ -272,6 +274,7 @@ Some parameters are used as "species specific" **(sp)**, some for model and visu
 * `eps_2` - this parameter determines the minimum distance that have to be kept between the beads of different chromosomes. It is also used to determine minimum distance to be kept between the beads and the boundaries of the nucleus and nucleolus. It is recommended that eps_1<eps_2 **(mv)**;
 * `trsp` - this parameter determines transparency in a range (0,1). Choose 1 if you wish the transparency off, if you choose 0 the chromosomes will not be visible **(mv)**;
 * `multi` - When you want to achieve more precise and detailed model of chromosome territories through more accurate impletion you can use this parameter. By default `multi`= 1 which means that one bead corresponds to one domain. When you want to fill space faithfully and with better accuracy you can increase this value ( keep in mind that this can lead to more complicated shapes of the simualted territories). For example, `multi`= 4 means that one domain will be represented by 4 spheres, `multi`=10 means that one domain will be represented as 10 spheres. ***Warning! Increasing this parameter leads to significant increase of the computational time necessary for model creation.*** **(mv)**; 
+* `restert_after` - parameter defining after how many iterations model should restart (in case that model still did not converge)
 
 
 
@@ -294,6 +297,8 @@ For the domains that are drawn in the phase of chromatin decondensation, the coo
 
 •	`dist_precurs()` The last step in each iteration is to verify that the newly generated domain is located at a suitable distance from the precursory domain. If this condition is true, the program returns to the function `new_domain()`;
 
+•	`bead_generate_wrap()` This function is used to restart the program when it cannot find the solution (when it is impossible to add a new domain to the previously created model components). The function counts the number of failures in the process of generation of a new domain. When the count reaches the value declared by `restart_after` variable, the process of model creation is restarted. In the case of restart, the previously generated part of the model is not saved, and the process of generating chromosomes starts from the beginning. The number of restarts does not affect the declared number of models to generate. 
+
 
 
 ### Running ChroTeMo
@@ -303,6 +308,7 @@ ChroTeMo allows to generate more than one model in one run.
 All you have to do is to run the script. It can be done in the same way as described above, when testing software environment.
 
 In the beginning the first (and last) question appears: "How many results do you want?" You should write any reasonable (in terms of computational time) number denoting the number of models to be created.  
+
 If you write 1 (one) - one model will be created and you can also see  visualisation. For number greater than one, Modeler works in "batch" mode and will write model parameters into files to be later viewed in Viewer.
 
 When you close ChroTeMo, the windows with visualization will close, but the file containing the model description is automatically saved into the working directory. Files are named according to the pattern: `workfile + data + time.txt`. 
