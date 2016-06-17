@@ -1,7 +1,7 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 #
-#    Copyright (C) 2016  K. Chromiński, M. Tkacz, D. Idziak, E. Bread, R. Hasterok
+#    Copyright (C) 2015  K. Chromiński, M. Tkacz, D. Idziak, E. Bread, R. Hasterok
 #    when you used it please cite:  
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -34,8 +34,8 @@ import gc
 from array import *
 
 l=0
-k_kol=[[0 for col in range(4)] for row in range(100)]
-tab = [[0 for col in range(90000)] for row in range(10)]
+
+
 # GUI elements
 root = Tkinter.Tk()
 root.withdraw()
@@ -46,6 +46,7 @@ r_k=float(f.readline())
 l=l+1
 ite=int(f.readline())
 l=l+1
+k_kol=[[0 for col in range(4)] for row in range(4*ite+1)]
 for po in range (0,4*(ite/2)):
     for po2 in range (0,4):
         k_kol[po][po2]=float(f.readline())
@@ -62,6 +63,7 @@ r_j=float(f.readline())
 l=l+1
 
 ind=int(f.readline())
+tab = [[0 for col in range(ind+2)] for row in range(10)]
 
 l=l+1
 licz=0
@@ -144,10 +146,10 @@ if (a>0 and b==0):
     k_kol[e][3]=1
 
 if (b>0):
-    print(" 1st chromosome from "+str(a)+" pair will be in dark green")
-    print(" 2nd chromosome from "+str(a)+" pair will be in light green")
-    print(" 1st chromosome from "+str(b)+" pair will be in dark red")
-    print(" 2nd chromosome from "+str(b)+ " pair will be in light orange")
+    print(" 1st chromosome from ",a, " pair will be in dark green \n")
+    print(" 2nd chromosome from ",a, " pair will be in light green \n")
+    print(" 1st chromosome from ",b, " pair will be in dark red \n")
+    print(" 2nd chromosome from ",b, " pair will be in light orange \n")
     if (a==1):
         a=0
     if (a==2):
@@ -199,7 +201,7 @@ if (b>0):
 
 # Model drawing
 ball = sphere(pos=(0,0,0), radius=r_s, material=materials.emissive, opacity=0.2)
-ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=(0.67,0.63,0.44), opacity=1)
+ball_2 = sphere(pos=(x_j,y_j,z_j), radius=r_j, color=color.orange, opacity=1)
 for z in range (0, licz):
     kul=sphere(pos=(tab[1][z],tab[2][z], tab[3][z]), radius=r_k, color=(k_kol[tab[0][z]][0],k_kol[tab[0][z]][1],k_kol[tab[0][z]][2]), opacity=k_kol[tab[0][z]][3])
 
