@@ -3,6 +3,8 @@
 #
 #    2016  M. Tkacz, K. Chromiński, D. Idziak, E. Robaszkiewicz, R. Hasterok
 #    if you find this useful, please cite:  
+#    Tkacz MA, Chromiński K, Idziak-Helmcke D, Robaszkiewicz E, Hasterok R (2016) 
+#    Chromosome Territory Modeller and Viewer. PLoS ONE 11(8): e0160303. doi:10.1371/journal.pone.0160303
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
