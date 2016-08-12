@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #    2016  M. Tkacz, K. Chromiński, D. Idziak-Helmcke, E. Robaszkiewicz, R. Hasterok
-#    If you find this script useful, please cite: ...
+#    If you find this script useful, please cite: 
+#    Tkacz MA, Chromiński K, Idziak-Helmcke D, Robaszkiewicz E, Hasterok R (2016) 
+#    Chromosome Territory Modeller and Viewer. PLoS ONE 11(8): e0160303. doi:10.1371/journal.pone.0160303
 #
 #    License GPLv3
 #    This program is free software: you can redistribute it and/or modify
