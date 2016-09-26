@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 #    2016  M. Tkacz, K. Chromiński, D. Idziak, E. Robaszkiewicz, R. Hasterok
-#    if you find this useful, please cite: 
+#    if you find this useful, please support us and cite: 
 #    Tkacz MA, Chromiński K, Idziak-Helmcke D, Robaszkiewicz E, Hasterok R (2016) 
 #    Chromosome Territory Modeller and Viewer. PLoS ONE 11(8): e0160303. doi:10.1371/journal.pone.0160303
 #
