@@ -17,6 +17,8 @@ Files in the repository:
 - Readme,
 - License.
 
-Repository also contains Media folder with screendumps and screencasts
+Repository also contains Media folder with screendumps and screencasts.
+
+**Erratum** folder contains information about any issues noticed AFTER publication in Journal.
 
 If you made use of our scripts and want that your article to be listed as Satellite Article - please inform us, sending referrences to your article and/or link to electronic version.
