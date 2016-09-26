@@ -1,6 +1,6 @@
 **Authors:** Magdalena Tkacz, Kornel Chrominski, Dominika Idziak - Helmcke, Ewa Robaszkiewicz, Robert Hasterok
 
-***If you find this code useful please cite:   
+***If you find this code useful please support us and cite:   
 Tkacz MA, Chromiński K, Idziak-Helmcke D, Robaszkiewicz E, Hasterok R (2016) 
 Chromosome Territory Modeller and Viewer. PLoS ONE 11(8): e0160303. doi:10.1371/journal.pone.0160303***
 
