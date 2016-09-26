@@ -1,11 +1,12 @@
 # Erratum
 
-## Figures
-Shortly after publication we notices inconsequence in colors in our figures. Modified versions are available at ... with description of changes (explanation).
-
+In this file we publish any remarks and/or corrections that appears after publication in Journal.
 We apologize for any inconvenience this caused you !
 
 *The Authors*
+
+## Figures
+Shortly after publication we notices inconsequence in colors in our figures. Modified versions are available at ... with description of changes (explanation).
 
 Figures in article should have following colors:
 
