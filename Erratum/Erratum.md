@@ -12,7 +12,7 @@ The corrected Figures with a description of changes are listed below.
 
 
 
-| Number | Figures - corrected version | Description of corrections |
+| Number | Figures - corrected version | Description of amendments |
 |----|-----------|-------------|
 | Fig. 8   | ![Fig8_modified](https://github.com/Kornelch/ChroTeMoVi/blob/master/Erratum/Fig8-small.png)  *[Link to Fig. 8 in high resolution](https://github.com/Kornelch/ChroTeMoVi/blob/master/Erratum/FullRes/Fig8.tif "Fig.8 high resolution")*     |     Lengths of the homologous chromosomes in the idiograms are equal, which is not clearly visible in the original picture published in PLoS One.      |
 |  Fig. 9  | ![Fig. 9 modified](https://github.com/Kornelch/ChroTeMoVi/blob/master/Erratum/Fig9_small.png)   *[Link to Fig. 9 in high resolution](https://github.com/Kornelch/ChroTeMoVi/blob/master/Erratum/FullRes/Fig9.tif "Fig.9 high resolution")*       |   The colour of the Bd5 chromosome bottom arm in the idiogram is now the same as in the visualisation, i.e. orange - parts A, B, C. In the original picture published in PLoS One the colour appears as light pink.            |
