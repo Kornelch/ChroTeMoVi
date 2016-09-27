@@ -7,8 +7,6 @@ In this file we publish any remarks and/or corrections that appear after publica
 ## Figures
 Shortly after publication we notice some inconsequence in colors in the Figure 9. The quality of Figures 8 – 10 has also been improved.
 
-The modified versions are available at ... with a description of changes.
-
 The correct Figures with a description of changes are listed below.
 
 
