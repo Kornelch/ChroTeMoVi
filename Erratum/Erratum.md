@@ -5,7 +5,7 @@ In this file we published any remarks and/or corrections that appeared already a
 *The Authors*
 
 ## Figures
-Shortly after publication we noticed some inconsistence in colours in Figure 9. Also, we have increased the resolution of Figures 8 – 10 and amended some minor issues therein. 
+Shortly after publication we noticed some inconsistency in colours in Figure 9. Also, we have increased the resolution of Figures 8 – 10 and amended some minor issues therein. 
 
 The corrected Figures with a description of changes are listed below.
 
