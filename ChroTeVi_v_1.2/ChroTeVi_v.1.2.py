@@ -35,7 +35,6 @@ from array import *
 
 l=0
 
-
 # GUI elements
 root = Tkinter.Tk()
 root.withdraw()
