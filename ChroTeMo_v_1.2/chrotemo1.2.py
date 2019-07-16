@@ -33,7 +33,6 @@ from copy import deepcopy
 
 import datetime
 
-
 restart = 0
 print 'Hello'
 itera=input("How many models do you want? \n")
