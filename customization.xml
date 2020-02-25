@@ -1,0 +1,10 @@
+<application>
+  <component name="com.intellij.ide.ui.customization.CustomActionsSchema">
+    <group value="Vcs.Push" is_action="true" action_type="1" position="1">
+      <path value="root" />
+      <path value="VCS Operations Popup" />
+      <path value="Vcs.Operations.Popup.VcsAware" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+  </component>
+</application>
