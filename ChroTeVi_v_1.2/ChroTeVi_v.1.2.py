@@ -108,7 +108,7 @@ for p in range(0,4*ite):
 if (a>0 and b==0):
     # chromosom a, jeden z pary, rami? krotsze ma kolor
     print("If only one pair is to be painted, certain chromosome in pair is denoted with digit_A and digit_B"+"\n")
-    print(" shorter arm in "+str(a)+"_A"+" will be painted as dark green ")
+    print(" shorter arm in "+str(a)+"_A "+"will be painted as dark green ")
     print(" longer arm in "+str(a)+"_A"+" will be painted as dark red ")
     print(" shorter arm in "+str(a)+"_B"+ " will be painted as light green ")
     print(" longer arm in "+str(a)+"_B"+ " will be painted as light orange ")
